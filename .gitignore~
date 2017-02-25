@@ -13,5 +13,4 @@
 *.tiff
 
 # Hugo public folder excluded since this is an OUTPUT folder
-# http://stackoverflow.com/questions/5533050/gitignore-exclude-folder-but-include-specific-subfolder
 public/

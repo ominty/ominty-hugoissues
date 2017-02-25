@@ -13,7 +13,7 @@
 
 		{{ range .Data.Pages }}
 			{{ if ne .Params.menu "main" }}			
-				{{- if ne .Type "teaser" }}                        
+				{{- if and (ne .Type "teaser") (ne .Type "liste")}}                        
                     <h3><a href="{{.RelPermalink}}">{{ .Title }}</a></h3>
                     <p><small>vom {{ .Date.Format .Site.Params.DateForm }}</small></p> 
                     {{ if .Description }}
