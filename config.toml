@@ -18,12 +18,12 @@ SectionPagesMenu = "main"
         name = "Wohnmobil"
         weight = 20
         identifier = "womo"
-        url = "/womo/intro.html"
+        url = "/womo/index.html"
  [[menu.main]]
         name = "Hunde"
         weight = 30
         identifier = "hund"
-        url = "/hund/intro.html"
+        url = "/hund/index.html"
  [[menu.main]]
         name = "Blog"
         weight = 40
@@ -33,7 +33,7 @@ SectionPagesMenu = "main"
         name = "Kontakt"
         weight = 50
         identifier = "kontakt"
-        url = "/kontakt/intro.html"
+        url = "/kontakt/index.html"
         
         
 # Global geltende eigene Variablen        
