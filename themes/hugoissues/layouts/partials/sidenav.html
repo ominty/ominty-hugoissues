@@ -1,0 +1,11 @@
+     <section> 
+	   <h2>weitere Artikel</h2> 
+		 <ul> 
+            {{ $act_section := .Section}}      <!-- Section der aktuellen Seite speichern -->             
+            {{ range where .Site.Pages "Section" $act_section }}       <!-- alle Seiten nach aktueller Section filtern -->
+			{{- if ne .Type "teaser" }}
+        		 <li><a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a></li>     <!-- Link erstellen -->
+		    {{- end -}}
+            {{ end }}      
+		 </ul>
+	 </section>

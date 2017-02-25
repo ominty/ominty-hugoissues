@@ -1,0 +1,8 @@
+# (c) bei Webservice Bernhard Albicker
+
+#Fehlerbehandlung
+ErrorDocument 404 /404.php
+
+#andere Startseite als die serverseitig festgelegte
+DirectoryIndex index.html intro.html index.php index.htm
+

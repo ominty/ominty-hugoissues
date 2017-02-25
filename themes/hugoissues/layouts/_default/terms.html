@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+<div class="canvasContent">
+    <article>
+      <h2>Die neuesten Artikel</h2>
+      {{- range first 3 .Data.Pages }}
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>    <!-- .RelPermalink anstelle .Permalink für portable Seiten -->
+    <p>  {{ .Description }} </p>
+      {{- end }}
+
+
+
+</article>
+   
+   <aside> 
+	 <section> 
+	 <h2>Kontakt</h2> 
+		 <ul> 
+		 <li><a href="link_1.html">Wiki</a></li> 
+		 <li><a href="link_2.html">Blog</a></li> 
+		 <li><a href="link_3.html">Forum</a></li> 
+		 </ul> 
+	 </section> 
+	 <section> 
+	 <h2>Weiterführende Links</h2> 
+		 <ul> 
+		 <li><a href="link_1.html">Wiki</a></li> 
+		 <li><a href="link_2.html">Blog</a></li> 
+		 <li><a href="link_3.html">Forum</a></li> 
+		 </ul> 
+	 </section> 
+   </aside> 
+</div>  
+ 
+{{ partial "footer.html" . }}

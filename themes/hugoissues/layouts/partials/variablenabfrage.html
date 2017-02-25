@@ -1,0 +1,17 @@
+<table>
+<tr><td>Site-Titel: </td><td>{{ .Site.Title }}</td></tr> <!-- Titel aus config.toml -->
+<tr><td>Seitentitel (.Title): </td><td>{{ .Title }}</td></tr> <!-- Einzelseite, aus Frontmatter entnommen -->
+<tr><td>Art der Seite (.Kind): </td><td>{{ .Kind }}</td></tr> <!-- page, home, section, taxonomy oder taxonomyTerm -->
+<tr><td>Sektion: </td><td>{{ .Section }}</td></tr> <!-- gibt den Bereich aus -->
+<tr><td>Type: </td><td>{{ .Type }}</td></tr> <!-- gibt den Typ aus -->
+<tr><td>Home: </td><td>{{ .IsHome }}</td></tr> <!-- wahr, falls Homepage -->
+<tr><td>Node: </td><td>{{ .IsNode  }}</td></tr> <!-- wahr, falls die Seite ein "Node" ist -->
+<tr><td>Content: </td><td>{{ .IsPage }}</td></tr> <!-- wahr, falls es eine Inhaltsseite ist -->
+<tr><td>nächste Seite: </td><td>{{ .Next }}</td></tr> <!-- nächste Seite nach Datum -->
+<tr><td>nächste Sect.Seite: </td><td>{{ .NextInSection }}</td></tr> <!-- nächste Seite im Bereich nach Datum -->
+<tr><td>vorher. Seite: </td><td>{{ .Prev }}</td></tr> <!-- vorherige Seite nach Datum -->
+<tr><td>vorher. Sect.Seite: </td><td>{{ .PrevInSection }}</td></tr> <!-- vorherige Seite im Bereich nach Datum -->
+<tr><td>Permalink: </td><td>{{ .Permalink }}</td></tr> <!-- absoluter Permalink -->
+<tr><td>Rel. Permalink: </td><td>{{ .RelPermalink }}</td></tr> <!-- relativer Link als Permalink -->
+<tr><td>URL: </td><td>{{ .URL }}</td></tr> <!-- aktuelle Adresse der Seite -->
+</table>

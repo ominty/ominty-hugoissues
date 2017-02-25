@@ -1,0 +1,90 @@
+/* Bilder formatieren*/
+article img {
+	border : 1px solid Gray;
+	max-width: 100%;
+	height: auto;
+	padding: 0;
+}
+.li {
+	float : left;
+	margin : 5px 10px 5px 0px;
+}
+.re {
+	float : right;
+	margin : 5px 0px 5px 10px;
+}
+.clear{
+	clear : both;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+/*Teaser auf Homepage formatieren und verlinken*/
+div.teaser {
+	border-width: 0;
+	border-radius: 1.5em;
+	font-size: 90%;
+}
+a#teaser-linkbox {
+	display:block;
+	/* width:150px; wird nicht benötigt, da durch display:block schon voll ausgeschöpft */
+	height:100%;
+	text-decoration: none;
+	/* border: 1px solid green; */
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*Formular*/
+form, fieldset {
+        background: #CCCCCC;
+        border: 1px solid #BBBBBB;
+        margin: .15em .7em .15em .7em;
+        padding: .7em;
+}
+fieldset {
+        margin: .15em 0 .15em 0;
+}
+
+input, select, textarea {
+        border: 1px solid #BBBBBB;
+        margin: 0.15em 0.15em 0.15em 0.15em;
+        line-height: 2em;
+        background: #EEEEEE; 
+}
+label.li
+{
+float : left;
+text-align : right;
+width : 35%;
+margin-right : .7em;
+}
+input[type=text],
+select
+{
+float : left;
+}
+input.re
+{
+        float : left;
+        width : auto;
+        margin-left : 45%;
+        margin-right : .7em;
+        clear : both;
+}
+input[type=checkbox].re,
+input[type=radio].re,
+input[type=submit].re
+{
+margin-left : 6.3em;
+}
+form br{
+clear : both;
+}
+form
+{
+line-height : 1.2em;
+}

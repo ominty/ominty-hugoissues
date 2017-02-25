@@ -1,0 +1,147 @@
+/* Zitat-Formatierung: */
+article h1,h2,h3,h4,h5,p,li,ol,ul,td,small,fieldset,label {
+    color: #505050;
+}
+
+/* Überschriften */
+h1{
+ 	font-size: 1.25em;
+	font-weight:normal;
+	line-height: 1.75em;
+	background-color : #E0E0E0;
+	border-color : #696969;
+	border-style : solid;
+	border-bottom-width : 1px;
+	border-top-width : 1px;
+	border-right-width : 0px;
+	border-left-width : 0px;
+	padding-left : 0.3em;
+}
+h2{
+    font-size: 1.25em;
+    font-weight:normal;
+    line-height: 1.375em;
+	border-color : #696969;
+	border-style : solid;
+	border-bottom-width : 1px;
+	border-top-width : 1px;
+	border-right-width : 0px;
+	border-left-width : 0px;
+	padding-left : 0.3em;
+}
+h3{
+    font-size: 1.125em;
+    font-weight:normal;
+    line-height: 1.25em;
+}
+
+h4,h5 {
+    font-size: 1em;
+    line-height: 1.25em;
+    font-style : italic;
+    font-weight : normal;
+}
+
+blockquote{
+	font-family : verdana, geneva, arial, helvetica, sans-serif;
+	color : darkmagenta;
+	font-style: italic;
+	background-color : #DDDDDD;
+    margin : 0.625em 1.875em 0.625em 1.875em;
+    padding : 0.625em;
+    border : 0px solid #505050;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+/* Code-Formatierung: >code< inline, >pre< für Codeblöcke */
+code {
+	font-family : "Courier New", Courier, monospace;
+	color: darkgreen;
+	white-space: pre-wrap;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+pre {
+	background-color : #E0E0E0;
+    margin : 0.625em 0.625em 0.625em 0.625em;
+    padding : 0.625em;
+    border : 1px solid #AAAAAA;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+/* umrandeter Kasten */
+.kasten {
+    margin : 0.625em 0.625em 0.625em 0.625em;
+    padding : 0.625em;
+    border : 1px solid #505050;
+}
+
+hr {
+    border: none;
+    border-top: .25em solid #BBBBBB;
+    height: 1px;
+    }
+
+/* Textelemente */
+p,li,ol,ul,td {
+    font-size : 1em;
+    font-size: 1em;
+    line-height: 1.25em;
+    }
+article ol,ul {
+    padding-left:1em;
+    }
+article li {
+    padding:0em;
+    }
+/* Kopfzeile in Tabellen */
+th {
+	border : none;
+    font-size: 1em;
+    font-weight:bold;
+    text-align : left;
+    font-size: 1em;
+    line-height: 1.25em;
+    }
+/* kleiner Text und Hervorhebungen */
+small {
+    font-size: 0.75em;
+    line-height: .875em;
+    margin: 0;
+    padding: 0;
+    }
+em {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.25em;
+    }
+strong {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.25em;
+    }
+
+
+/* Textverlinkungen */
+article A:LINK {
+        color : blue;
+        background-color : transparent;
+        text-decoration : none;
+    margin: 0;
+    padding: 0;
+}
+article A:VISITED {
+        color : violet;
+        background-color : transparent;
+        text-decoration : none;
+}
+article A:HOVER {
+        color : blue;
+        background-color : transparent;
+        text-decoration : underline;
+}
+

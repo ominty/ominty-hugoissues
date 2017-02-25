@@ -1,0 +1,39 @@
+{{ partial "header.html" . }}
+
+<!-- dieses Template wird aufgerufen zur Erzeugung von Listen aus Taxonomies (tags, categories) -->
+<div class="canvasContent">
+    <article>
+		<h1>
+		{{ if .Site.Params.strings.posts_list_header }}
+			{{ .Site.Params.strings.posts_list_header }}
+		{{ else }}
+			Inhaltsverzeichnis: {{ .Title | humanize }}
+		{{ end }}</h1>
+<!-- in Überschrift evtl. Variable einsetzen, welches Tag/welche Kategorie gelistet wird -->
+
+		{{ range .Data.Pages }}
+			{{ if ne .Params.menu "main" }}			
+				{{- if ne .Type "teaser" }}                        
+                    <h3><a href="{{.RelPermalink}}">{{ .Title }}</a></h3>
+                    <p><small>vom {{ .Date.Format .Site.Params.DateForm }}</small></p> 
+                    {{ if .Description }}
+                    	<p>{{ .Description }}</p>
+                    {{ else }}
+                    	<p>{{ .Summary }}</p>
+                    {{ end }}
+                    
+                    <!-- <p>&nbsp;</p> -->
+					<hr>
+	        	{{ end }}
+        	{{ end }}
+	    {{ end }}
+    </article>
+   
+   <!-- <aside> 
+	 
+        	{{ partial "sidenav.html" . }} 
+	  
+   </aside>  -->
+</div>  
+ 
+{{ partial "footer.html" . }}

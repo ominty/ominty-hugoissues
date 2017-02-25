@@ -1,0 +1,59 @@
+baseurl = "http://privat.albicker.org"
+languageCode = "de-DE"
+title = "Iveco Daily 4x4, Hunde und multithematisches Blog - Bernhard Albicker"
+
+uglyURLs = true             
+relativeURLs = true         
+canonifyURLs = false        
+
+theme = "hugoissues"
+
+# defaultContentLanguage = "de"
+
+PreserveTaxonomyNames = true        # Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
+
+# Definition für das Hauptmenü  Identifier und url müssen GLEICH sein
+SectionPagesMenu = "main"   
+ [[menu.main]]
+        name = "Wohnmobil"
+        weight = 20
+        identifier = "womo"
+        url = "/womo/intro.html"
+ [[menu.main]]
+        name = "Hunde"
+        weight = 30
+        identifier = "hund"
+        url = "/hund/intro.html"
+ [[menu.main]]
+        name = "Blog"
+        weight = 40
+        identifier = "blog"
+        url = "/blog.html"
+ [[menu.main]]
+        name = "Kontakt"
+        weight = 50
+        identifier = "kontakt"
+        url = "/kontakt/intro.html"
+        
+        
+# Global geltende eigene Variablen        
+[Author]
+name = "Bernhard Albicker"
+email = "spam@spam.com"
+
+
+[params]
+    # If false display full article contents in blog index.
+    # Otherwise show description and 'read on' link to individual blog post page.
+    # Default (if omitted) is true.
+    use_summaries = true
+
+    # Datumsformat: es müssen diese Angaben verwendet werden: "Mon, 2. Jan. 2006", nur die Reihenfolge darf geändert werden
+    DateForm = "02.01.2006"
+
+    # alternativer Titel für die Seiten im Blog-Bereich
+    BlogTitle = "Seiten, die die Welt (nicht) braucht"
+    
+    # copyright
+    copyright = "Bernhard Albicker"
+

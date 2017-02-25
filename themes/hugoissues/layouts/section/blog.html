@@ -1,0 +1,97 @@
+{{ partial "header.html" . }}
+
+<!-- dieses Template wird aufgerufen zur Erzeugung von Listen aus Taxonomies (tags, categories) -->
+<div class="canvasContent">
+    <article>
+    			<h1>
+				{{ if .Site.Params.strings.posts_list_header }}
+					{{ .Site.Params.strings.posts_list_header }}
+				{{ else }}
+					{{ .Title }} 
+				{{ end }}
+				</h1>
+
+				{{ .Content }}
+
+<!-- in Überschrift evtl. Variable einsetzen, welches Tag/welche Kategorie gelistet wird -->
+
+                {{ $paginator := .Paginate (where .Data.Pages "Section" "blog") }}
+				{{ range $paginator.Pages }}    <!-- .Paginator speichert Infos zur Seitenaufteilung -->
+				    {{ if ne .Params.menu "main" }}		<!-- falls .Params.menu NICHT "main" entspricht -->	
+                        <h3><a href="{{.RelPermalink}}">{{ .Title }}</a></h3>
+                        <span><small>vom {{ .Date.Format .Site.Params.DateForm }}
+                        in 
+        				{{ range $i, $e :=.Params.categories }}
+        					{{if $i}} , {{end}}
+        					<a href="/categories/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
+        				{{ end }} 
+        				
+        				
+        				{{if .Params.tags }}
+            				mit dem/den Schlagwort(en)
+            				{{ range $i, $e :=.Params.tags }}
+            					{{if $i}} , {{end}}
+            					<a href="/tags/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
+            			{{ end }}
+        				{{ end }}                        
+                        
+                        </small></span>                      
+                        
+                        <p>
+                        {{if .Params.Description }}
+                            <em>{{ .Description }}</em><br>
+                        {{ end }}
+                        {{ .Summary }}
+                          {{ if .Truncated }}
+                              <div class="read-more-link" style="text-align: right; font-style: italic; font-size: .85em; ">
+                                <a href="{{ .RelPermalink }}">weiterlesen >>></a>
+                              </div>
+                          {{ end }}
+                        </p>
+                        
+                    {{ end }}
+			    {{ end }}
+        
+        <p><small>{{ .Paginator.TotalNumberOfElements }} Blogbeiträge</small></p>
+		<hr>
+        <p align="center">
+            
+            {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+                  {{ if .Paginator.HasPrev }}
+                  <a href="{{.Paginator.Prev.URL}}"><<< neuere Beiträge&nbsp;&nbsp;</a>
+                  {{ end }}
+                         +++ Seite {{ .Paginator.PageNumber }} von {{ .Paginator.TotalPages }} +++ 
+                {{ if .Paginator.HasNext }}
+                  <a href="{{.Paginator.Next.URL}}">&nbsp;&nbsp;ältere Beiträge >>></a>
+                {{ end }}
+            {{ end }}
+             
+        </p>
+        
+    </article>
+   
+   
+    <aside> 
+
+	    <section>  
+        <h2>Rubriken (Categories)</h2>        
+        <p class="widget">
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                <a href="/categories/{{ $name | urlize }}.html">{{ $name }}</a>,&nbsp;
+            {{ end }}
+        </p>
+        </section>
+
+	    <section>  
+        <h2>Schlagworte (Tags)</h2>	    
+        <p class="widget">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                <a href="/tags/{{ $name | urlize }}.html">{{ $name }}</a>,&nbsp;
+            {{ end }}
+        </p>
+        </section>
+
+    </aside>
+</div>  
+ 
+{{ partial "footer.html" . }}

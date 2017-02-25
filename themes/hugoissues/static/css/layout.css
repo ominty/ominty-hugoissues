@@ -1,0 +1,300 @@
+/* Flexbox Layout */
+body {
+	background-color: #BBBBBB;
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 100%;
+	}
+
+/* Container für Kopf, Inhalt, Fuß getrennt, um Zentrierung und maximale Breite unabhängig steuern zu können */
+.canvasHeader {
+	width: 100%;
+	max-width: 1200px;
+	background-color: #222222;
+	margin: 0em auto 1em auto; /* top right bottom left */
+	box-shadow: 0px 0px .2em #BBBBBB;
+	display: flex;
+	flex-flow: row wrap;
+} 
+.canvasContent {
+	width: 100%;
+	max-width: 1200px;
+	background-color: #EEEEEE;
+	margin: 1em auto 1em auto; 
+	box-shadow: 0px 0px .2em #BBBBBB;
+	display: flex;
+	flex-flow: row wrap;
+} 
+.canvasFooter {
+	width: 100%;
+	max-width: 1200px;
+	background-color: #BBBBBB;
+	margin: 1em auto 1em auto; 
+	box-shadow: 0px 0px .2em #BBBBBB;
+	display: flex;
+	flex-flow: row wrap;
+} 
+
+/*  */
+
+* {
+  padding: 5px;
+  margin:5px;
+}
+header{
+  /*background: #FFFFFF;*/
+  padding: 0em;
+  margin: 1em;
+  }
+
+nav{
+  background: #CCCCCC;
+  }
+
+footer{
+  /*background-color: #CCCCCC;*/
+  padding: 0em;
+  margin: 1em;
+}
+
+/* Mobile first - alle Dokument-Blöcke bekommen 100% Breite */  
+header, nav, article, aside, footer {
+  flex: 1 100%;
+}
+ 
+header {
+  display: flex;
+  flex-flow: row wrap;  
+}
+ 
+header * {
+  flex: 1 1 0%;
+}
+ 
+header img {
+  flex: 0 0 auto;
+  /*  height: 45px;
+  padding-left: 0px;
+  */
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+}  
+
+header nav {
+  flex: 1 1 100%;
+}
+ 
+nav ul {
+  display: flex;  
+  flex-direction: column;
+}
+ 
+nav li {
+  margin: 1.3em 0;
+  flex: 1 1 100%;
+}
+
+/* Smart Phones und Tablets mit mittlerer Auflösung */
+@media all and (min-width: 35em) {
+ 
+  header img {
+    flex: 0 0 auto;
+  /*  height: 90px;*/
+  }
+ 
+  nav ul {
+    flex-direction: row;
+  }
+ 
+  nav li {
+    flex: 1 1 0%;
+  }	
+ 
+  /* durch auto werden die beiden asides in eine Zeile gesetzt */
+  aside { 
+    flex: 1 auto;
+  }
+ 
+  article { 
+    order: 2; 
+  }
+  #news { 
+    flex: 1 auto;
+    order: 3; 
+  }
+  aside { 
+    flex: 1 auto;
+    order: 4;
+  }
+  footer {
+    order: 5;
+  }
+  /* Bereichs-Vorschau auf Homepage */
+  div.teaser {
+  	max-width: 45%;
+  	display: inline-block;
+  	vertical-align: top;
+  }
+	/* Blog-Vorschau auf Homepage */
+	div#vorschau {
+		margin-left: 10%;
+		margin-right: 15%;
+	}
+}
+ 
+/* Viewports mit großer Auflösung */
+@media all and (min-width: 50em) {
+/* article wird 2.5x so breit wie die beiden asides */
+  article {                        
+    order: 3;	
+    flex: 5 1 0%;
+  }
+ 
+  aside {
+    flex: 2 1 0%;
+  }
+  #news {
+    flex: 2 1 0%;
+    order: 2;
+    align-self: center;
+    height: 120px;  
+  }
+  /* Bereichs-Vorschau auf Homepage */
+  div.teaser {
+  	max-width: 30%;
+  	display: inline-block;
+  	vertical-align: top;
+  }
+  /* Blog-Vorschau auf Homepage */
+  div#vorschau {
+	margin-left: 10%;
+	margin-right: 15%;
+  }
+}
+
+/* Navigationsleiste formatieren */
+nav {
+  font-size: 1em;
+  padding: 0.1em;
+  background: #CCCCCC;
+  border-color: #BBBBBB;
+  }
+nav ul {
+  padding:0;
+}
+ 
+nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+}
+ 
+nav a {
+  display: block;
+  padding: 0.2em 10px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+ 
+nav ul a:hover,
+nav ul a:active  {
+  color: #000000;
+  background-color: #DDDDDD;
+}
+
+
+
+/*Seiteninhalt*/
+footer A:LINK {
+        color : #447ED5;
+        background-color : transparent;
+        text-decoration : none;
+}
+footer A:VISITED {
+        color : #9A44D5;
+        background-color : transparent;
+        text-decoration : none;
+}
+footer A:HOVER {
+        color : #447ED5;
+        background-color : transparent;
+        text-decoration : underline;
+}
+
+
+/*Menüleiste*/
+aside H2 {
+        color : #444444;
+        background-color : transparent;
+        font-style : normal;
+        font-size : 130%;
+        font-weight : 200;
+        line-height : 150%;
+}
+aside ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0;
+	border: none;
+	font-size:13px;
+}
+
+aside li {
+	font-size:13px;
+	margin: 0px 0px 1px 0px;
+}
+aside li a {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	background-color: #333333;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+	width : 170px;	
+}
+html>body aside li a {
+width: auto;
+}
+
+aside li a:hover {
+	background-color: #CCCCCC;
+	/*#FFCC00*/
+	color : #000000;
+}
+
+aside li a.active {
+background-color: #CCCCCC;
+color: #000000;
+}
+/*Teaser auf Homepage formatieren und verlinken*/
+div.teaser {
+	border-width: 0;
+	border-radius: 1.5em;
+	font-size: 90%;
+	text-decoration : none;
+	border: 0;
+}
+
+
+/* link-Auszeichnung in der Seitenleiste */
+.widget A:LINK {
+        color : #447ED5;
+        background-color : transparent;
+        text-decoration : none;
+    margin: 0;
+    padding: 0;
+}
+.widget A:VISITED {
+        color : #9A44D5;
+        background-color : transparent;
+        text-decoration : none;
+}
+.widget A:HOVER {
+        color : #447ED5;
+        background-color : transparent;
+        text-decoration : underline;
+
+
+

@@ -1,0 +1,46 @@
+ {{ partial "header.html" . }}
+
+<div class="canvasContent">
+    <article>
+      <!--Seiteninhalt-->
+            <p><small>
+                {{if .PrevInSection}}<a href="{{.PrevInSection.RelPermalink}}"><<< vorheriger Artikel</a>{{end}} - - - 
+                {{if .NextInSection}}<a href="{{.NextInSection.RelPermalink}}">nächster Artikel >>></a>{{end}}
+            </small></p>
+            
+			<h1>{{ .Title }}</h1>
+			
+			<span><small>veröffentlicht am {{ .Date.Format .Site.Params.DateForm }}
+
+                in 
+				{{ range $i, $e :=.Params.categories }}
+					{{if $i}} , {{end}}
+					<a href="/categories/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
+				{{ end }} 
+				
+				
+				{{if .Params.tags }}
+    				mit dem/den Schlagwort(en)
+    				{{ range $i, $e :=.Params.tags }}
+    					{{if $i}} , {{end}}
+    					<a href="/tags/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
+    			{{ end }}
+				{{ end }}
+				
+				
+			</small></span>
+
+			<br>
+			{{ .Content }}
+
+
+    </article> 
+   
+   <!-- <aside> 
+	 <section> 
+	 
+	 </section> 
+   </aside>  -->
+</div>  
+ 
+{{ partial "footer.html" . }}
