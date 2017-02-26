@@ -2,6 +2,7 @@
 # Doku for this repository
 
 ## Overview over the snapshots with some basic info
+This gives a description of the changes I did from step to step and the issues involved
 
 ### Base tree
 [Link](https://github.com/ominty/ominty-hugoissues/tree/41a0acbd4c9531da565cb0092b1e0ee873dade8c) - this includes the following:
@@ -12,13 +13,13 @@
 - RSS link in header points to `/index.xml` for all pages
 
 ### Tree "RSS Taxonomies and _index filtered"
-[Link](https://github.com/ominty/ominty-hugoissues/commit/84ea0e0650a0f063209945ac7b855d388790b4dd)  - this includes the following:
+[Link](https://github.com/ominty/ominty-hugoissues/tree/84ea0e0650a0f063209945ac7b855d388790b4dd)  - this includes the following:
 
 - .RSSlink activated - see Issue #3037 below
 - sidenav modified to exclude `_index.md` in sections (as this should be frontmatter and content to sections list files only)
 
-### Branch "index.md  within section link renders to wrong place"
-[Link](https://github.com/ominty/ominty-hugoissues/commit/84ea0e0650a0f063209945ac7b855d388790b4dd)  - this includes the following:
+### Tree "index.md  within section link renders to wrong place"
+[Link](https://github.com/ominty/ominty-hugoissues/tree/16555037268e1b3266a6144876f34ea46daf4963)  - this includes the following:
 
 - all `intro.md` have been renamed to `index.md` in the sections
 - `config.toml` , teasers on the homepage and sidenav have been adjusted 
@@ -111,6 +112,10 @@ That's why I used to rename `/section/index.md` to something else like `/section
 
 ## Issues filed 
 [see here](https://github.com/spf13/hugo/issues/)
+
+### index.md within section - link renders to wrong place #3102
+
+detailed description see above: **Tree "index.md  within section link renders to wrong place"**
 
 ###  .RSSLink points to wrong destination #3037
 
