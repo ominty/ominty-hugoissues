@@ -99,7 +99,7 @@ It ends up like this:
 which obviously is wrong since the first line should be like
 
 ```
-<li><a href="../womo/index.html">Einführung</a></li>
+<li><a href="../womo/index.html">Index</a></li>
 ```
 
 So at least for creating the menue index.md is NOT treated as content and metadata for a single page.
