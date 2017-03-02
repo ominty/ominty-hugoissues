@@ -30,6 +30,9 @@ PreserveTaxonomyNames = true
 V0.18.1    
 
 ### Test V0.19
+
+Commit d62466b74feb3cde90cc200f67e67d5f47e14d43
+
 I updated the RSS section of the template to render RSS from pages to .Site.RSSLink and from taxonomy pages to the taxonomy RSS feed.
 
 ```
@@ -50,7 +53,9 @@ canonifyURLs = false
 PreserveTaxonomyNames = true    
 V0.19   
 
-update: with `PreserveTaxonomyNames = false` at least my taxonomy pages are working, but RSS feed links in taxonomy listing pages are still wrong:
+
+#### update: Commit 
+with `PreserveTaxonomyNames = false` at least my taxonomy pages are working, but RSS feed links in taxonomy listing pages are still wrong:
 From `http://localhost:1313/tags/tutorial.html` it still points to `http://localhost:1313/tags/tutorial.xml` whereas the file is located in `/tags/tutorial/index.xml`
 
 

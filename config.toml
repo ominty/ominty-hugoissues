@@ -10,7 +10,7 @@ theme = "hugoissues"
 
 # defaultContentLanguage = "de"
 
-PreserveTaxonomyNames = true        # Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
+PreserveTaxonomyNames = false        # Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
 
 # Definition für das Hauptmenü  Identifier und url müssen GLEICH sein
 SectionPagesMenu = "main"   
