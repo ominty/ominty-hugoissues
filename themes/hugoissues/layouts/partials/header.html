@@ -29,15 +29,15 @@
 <link rel="stylesheet" href="{{ "/css/spezial.css" | relURL }}">
 <link rel="stylesheet" href="{{ "/css/druck.css" | relURL }}" media="print">
 
-    <!-- rss nur für Hauptseite -->
-    <!-- <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> --> 
+<!-- RSS-Links für Inhaltsseiten und Listenseiten -->
+    {{ if eq .Kind "page" }}
+        <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />        
+    {{ else }}
+        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+    {{ end }}
+<!-- /RSS-Links für Inhaltsseiten und Listenseiten -->
 
-    <!-- rss - auch für Unterseiten, Kategorien, Schlagwörter => erzeugt auf den Artikelseiten einen leeren Link :(, deshalb dort den "else" Link -->
-{{ if .RSSLink }}
-	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ else }}
-    <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
+
     <!-- Sprache/Region für Suchmaschinen -->
     <link rel="alternate" hreflang="de" href="{{ .Permalink }}" />
 <script type="text/javascript">
