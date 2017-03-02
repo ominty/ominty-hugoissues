@@ -1,9 +1,14 @@
+@charset "utf-8";
 /* Flexbox Layout */
 body {
 	background-color: #BBBBBB;
 	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 100%;
 	}
+
+.print {
+    display: none;
+} 
 
 /* Container für Kopf, Inhalt, Fuß getrennt, um Zentrierung und maximale Breite unabhängig steuern zu können */
 .canvasHeader {

@@ -1,11 +1,12 @@
 +++
-title = "Wohnmobil auf Basis Iveco Turbo Daily 4x4"
+url         = "womo/index.html"
+title       = "Wohnmobil auf Basis Iveco Turbo Daily 4x4"
 linktitle   = "Einführung"
-date =  "2007-07-19"
+date        =  "2007-07-19"
 description = "Beschreibung meines Reisefahrzeugs - Einleitung: warum ein Iveco Daily?"
-keywords      = "Gfk-Koffer, Iveco, Reisemobil "
-categories = ["WOMO"]
-weight = 1
+keywords    = "Gfk-Koffer, Iveco, Reisemobil"
+categories  = ["WOMO"]
+weight      = 1
 +++
 
 <!--INHALT Beginn-->

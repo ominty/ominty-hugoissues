@@ -1,4 +1,6 @@
-/* Zitat-Formatierung: */
+@charset "utf-8";
+
+/* Textart-Formatierung: */
 article h1,h2,h3,h4,h5,p,li,ol,ul,td,small,fieldset,label {
     color: #505050;
 }
