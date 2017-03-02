@@ -6,14 +6,18 @@
 {{ .Hugo.Generator }}
 <meta name="generator" content="Bluefish 2.2.5" />
 <title>
-    {{ if eq .Kind "page" }}
+    {{ if or (eq .Kind "page") (eq .Kind "home") }}
         {{ if eq .Section "blog" }}
             {{ .Title }} * {{ .Site.Params.BlogTitle }}
         {{ else }}
             {{ .Title }} * {{ .Site.Title }}
         {{ end }}
     {{ else }}
-        * {{ .Site.Title }} * {{ .Title }}
+        {{ if eq .Section "blog" }}
+            {{ .Site.Params.BlogTitle }}
+        {{ else }}
+            {{ .Site.Title }}
+        {{ end }}
     {{ end }}
 </title>
 {{ if eq .Kind "page" }}
@@ -29,15 +33,15 @@
 <link rel="stylesheet" href="{{ "/css/spezial.css" | relURL }}">
 <link rel="stylesheet" href="{{ "/css/druck.css" | relURL }}" media="print">
 
-    <!-- rss nur für Hauptseite -->
-    <!-- <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> --> 
+<!-- RSS-Links für Inhaltsseiten und Listenseiten -->
+    {{ if or (eq .Kind "page") (eq .Kind "home") }}
+        <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />        
+    {{ else }}
+        <!-- in Hugo 0.18.1 fehlerhaft: -->
+        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+    {{ end }}
+<!-- /RSS-Links für Inhaltsseiten und Listenseiten -->
 
-    <!-- rss - auch für Unterseiten, Kategorien, Schlagwörter => erzeugt auf den Artikelseiten einen leeren Link :(, deshalb dort den "else" Link -->
-{{ if .RSSLink }}
-	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ else }}
-    <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
     <!-- Sprache/Region für Suchmaschinen -->
     <link rel="alternate" hreflang="de" href="{{ .Permalink }}" />
 <script type="text/javascript">
