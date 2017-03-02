@@ -22,12 +22,12 @@ instead of
 [http://www.example.com/{section-name}/index.xml](http://www.example.com/%7Bsection-name%7D/index.xml)
 where indeed I can find the relevant feed file.
 
-*****
 uglyURLs = true    
 relativeURLs = true    
 canonifyURLs = false
 PreserveTaxonomyNames = true    
 V0.18.1    
+*****
 
 ### Test V0.19
 
@@ -46,15 +46,15 @@ I updated the RSS section of the template to render RSS from pages to .Site.RSSL
 I can't open any taxonomy pages since all links are wrong => with `PreserveTaxonomyNames = true` taxonomy pages will render to a mix of Capital and small letters whereas the generated links in the header show all in small letters => new bug.
 Besides that when I open `http://localhost:1313/tags/Tutorial.html` manually to get the list page the rss link inside is `http://localhost:1313/tags/tutorial.xml` whereas the xml location is still  `/tags/Tutorial/index.xml`
 
-*****
 uglyURLs = true    
 relativeURLs = true    
 canonifyURLs = false
 PreserveTaxonomyNames = true    
 V0.19   
+*****
 
 
-#### update: Commit 
+#### update: Commit b715b9805ab2823ced45c93dc81d9a2e4e6bde88
 with `PreserveTaxonomyNames = false` at least my taxonomy pages are working, but RSS feed links in taxonomy listing pages are still wrong:
 From `http://localhost:1313/tags/tutorial.html` it still points to `http://localhost:1313/tags/tutorial.xml` whereas the file is located in `/tags/tutorial/index.xml`
 
