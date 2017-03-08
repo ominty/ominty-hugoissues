@@ -1,7 +1,7 @@
 
 # Doku for this repository
 
-## Sorting by date not working in RSS Feeds when pages with weight in site
+## Sorting by date not working in RSS Feeds when pages with weight in site - Issue #3145
 
 I have a page with sections of "normal web pages" - these are sorted by weight to get the appropriate page order in the menu.
 Then there is a blog section which is naturally is sorted by reverse date.
@@ -36,5 +36,5 @@ I create a site wide RSS feed like the following:
 ```
 
 but this does not show up any new articles from the blog but only the weighted pages from the other sections.
-What's going wrong?
+
 V0.19
