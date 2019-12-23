@@ -8,7 +8,21 @@ canonifyURLs = false
 
 theme = "hugoissues"
 
-# defaultContentLanguage = "de"
+defaultContentLanguage = "de"
+
+[languages]
+[languages.de]
+LanguageName = "deutsch"
+title = "My blog"
+weight = 1
+linkedin = "english-link"
+
+[languages.en]
+LanguageName = "english"
+copyright = "Tout est à moi"
+title = "Mon blog"
+weight = 2
+linkedin = "lien-francais"
 
 PreserveTaxonomyNames = true        # Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
 
@@ -17,13 +31,13 @@ SectionPagesMenu = "main"
  [[menu.main]]
         name = "Wohnmobil"
         weight = 20
-        identifier = "womo"
-        url = "/womo/index.html"
+        identifier = "ivecowomo"
+        url = "/ivecowomo/start.html"
  [[menu.main]]
         name = "Hunde"
         weight = 30
         identifier = "hund"
-        url = "/hund/index.html"
+        url = "/hund/steckbrief.html"
  [[menu.main]]
         name = "Blog"
         weight = 40
@@ -33,7 +47,7 @@ SectionPagesMenu = "main"
         name = "Kontakt"
         weight = 50
         identifier = "kontakt"
-        url = "/kontakt/index.html"
+        url = "/kontakt/form.html"
         
         
 # Global geltende eigene Variablen        

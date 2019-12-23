@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta charset="UTF-8"/>
 {{ .Hugo.Generator }}
-<meta name="generator" content="Bluefish 2.2.5" />
+<meta name="generator" content="Bluefish 2.2.7" />
 <title>
     {{ if or (eq .Kind "page") (eq .Kind "home") }}
         {{ if eq .Section "blog" }}
@@ -76,6 +76,12 @@
             {{ end }}
         </ul>
     </nav>
+
+    <ul>
+    {{ range $.Site.Home.AllTranslations }}
+    <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+    </ul>
 
  </header> 
 </div> 
