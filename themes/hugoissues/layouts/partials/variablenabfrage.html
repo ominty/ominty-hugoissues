@@ -1,7 +1,13 @@
+<hr>
 <table>
+<tr><td>Hugo Version: </td><td>{{ hugo.Version }}</td></tr> <!-- Versionsangabe -->
 <tr><td>Site-Titel: </td><td>{{ .Site.Title }}</td></tr> <!-- Titel aus config.toml -->
 <tr><td>Seitentitel (.Title): </td><td>{{ .Title }}</td></tr> <!-- Einzelseite, aus Frontmatter entnommen -->
+<tr><td>Name des Links (.LinkTitle): </td><td>{{ .LinkTitle }}</td></tr> <!-- Linktitel aus Frontmatter, falls vorhanden -->
 <tr><td>Art der Seite (.Kind): </td><td>{{ .Kind }}</td></tr> <!-- page, home, section, taxonomy oder taxonomyTerm -->
+<tr><td>Taxonomy Name: </td><td>{{ .Data.Singular }}</td></tr> <!-- gibt -->
+<tr><td>Taxonomy: </td><td>{{ .Data.Terms }}</td></tr> <!-- the taxonomy itself -->
+<tr><td>Tax. der Site </td><td>{{ .Site.Taxonomies }}</td></tr> <!-- gibt  -->
 <tr><td>Sektion: </td><td>{{ .Section }}</td></tr> <!-- gibt den Bereich aus -->
 <tr><td>Type: </td><td>{{ .Type }}</td></tr> <!-- gibt den Typ aus -->
 <tr><td>Home: </td><td>{{ .IsHome }}</td></tr> <!-- wahr, falls Homepage -->
@@ -13,5 +19,5 @@
 <tr><td>vorher. Sect.Seite: </td><td>{{ .PrevInSection }}</td></tr> <!-- vorherige Seite im Bereich nach Datum -->
 <tr><td>Permalink: </td><td>{{ .Permalink }}</td></tr> <!-- absoluter Permalink -->
 <tr><td>Rel. Permalink: </td><td>{{ .RelPermalink }}</td></tr> <!-- relativer Link als Permalink -->
-<tr><td>URL: </td><td>{{ .URL }}</td></tr> <!-- aktuelle Adresse der Seite -->
+<tr><td>RSS: </td><td>{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}</td></tr> <!-- RSS-Link der Tax. Seiten -->
 </table>

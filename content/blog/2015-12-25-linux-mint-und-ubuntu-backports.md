@@ -1,8 +1,8 @@
 +++
 title 		= "Linux Mint und die Ubuntu-Backports"
+description = "Aktivierung neuer Programmversionen auf älterer Linux-System-Basis in Ubuntu und Mint"
 date 		= "2015-12-25T22:25:17+01:00"
-categories 	= ["Linux"]
-tags 		= ["Linux-Tipps", "Systemwartung"]
+linux		= ["Tipps", "Systemwartung"]
 
 +++
 

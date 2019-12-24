@@ -1,8 +1,8 @@
 +++
 title 		= "Kurbelwellengehäuse-Entlüftung und merkwürdiger Schleim"
+description = "Nach längerer Fahrt entstand eine Schleim-Pfütze unter dem Auto. Die Fehlersuche blieb ergebnislos."
 date 		= "2016-04-11"
-categories 	= ["Iveco"]
-tags 	    = ["Fahrzeugtechnik"]
+iveco	    = ["Blogartikel", "Fahrzeugtechnik"]
 
 +++
 

@@ -1,8 +1,8 @@
 +++
 title 		= "sudo vs. gksudo - und verbogene Dateirechte"
+description = "Kurztipps zur Nutzung des Linux-Terminals bei Datei-Problemen" 
 date 		= "2015-12-24T22:25:17+01:00"
-categories 	= ["Linux"]
-tags 		= ["Linux-Tipps", "Systemwartung"]
+linux		= ["Tipps", "Systemwartung"]
 
 +++
 
@@ -67,3 +67,27 @@ Deshalb:
 > Terminal-Programme mit `sudo` ausführen, grafische Programme mit `gksudo`, falls _wirklich_ root-Rechte gebraucht werden.
 
 Hinweis: dies bezieht sich auf Gnome-Desktop und seine Abkömmlinge. In der "KDE-Welt" gibt es wohl den ähnlichen Befehl `kdesudo` für grafische Anwendungen.
+
+### Doch auf dem Holzweg?
+_Nachtrag vom 12.04.2017_
+Die verbogenen Dateirechte mögen eine der Ursachen für die Fehlermeldung mit dem Vorschaupuffer gewesen sein, aber sicher nicht die Einzige.   
+Denn immer mal wieder tauchte die Fehlermeldung auf, aber
+
+```
+~ $  find ~ -user root -ls
+```
+
+lieferte jetzt __keine__ Ausgabe mehr.
+
+```
+~ $ sudo nemo --fix-cache 
+[sudo] password for {benutzername}: 
+User thumbnail cache successfully repaired.
+```
+wird wohl nicht viel erfolgreicher sein als der `Reparieren`-Button in Nemo. Und nachdem die `nemo-media-columns`-Erweiterung im Ruf steht, Nemo sowohl stark zu verlangsamen als auch ggf. für den Fehler verantwortlich zu sein, hab ich auch diese deinstalliert:
+
+```
+nemo-media-columns
+```
+
+Mal sehen, ob jetzt Ruhe ist ...

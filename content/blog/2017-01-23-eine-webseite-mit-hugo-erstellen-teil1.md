@@ -3,13 +3,15 @@ title = "Eine Webseite mit Hugo erstellen - Tutorial Teil 1 - Inhalte strukturie
 date = "2017-01-23"
 description = "Struktur einer Webseite für den Einsatz von Hugo, es werden erläutert: Verzeichnisse, Bereiche, Dokumententypen"
 keywords      = "Hugo, Webseite, Struktur, Verzeichnis, Template, Theme, Menü"
-categories = ["Webseiten"]
-tags = ["Hugo", "Tutorial"]
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
+tutorials	= ["Hugo"]
+
 +++
 
 Nach über einem Jahr "Testbetrieb" meines neuen Hugo-Blogs innerhalb meiner alten Homepage (die mit nur kleinen Änderungen am Layout seit jetzt über 10 Jahren online ist), und weil auch auf meiner Seite die Zugriffe mit Geräten mit kleinen Displays zunehmen, habe ich mich entschlossen, den kompletten Webauftritt neu zu organisieren.
 Und wenn ich ohnehin schon an einem neuen HTML5-Template arbeite, dann kann ich auch gleich neben dem Blog _die komplette Homepage_ in Hugo integrieren. Dieser Artikel beschreibt die Voraussetzungen seitens Hugo und die daraus resultierende Vorgehensweise.   
-Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tags/hugo.html) notwendig.<!--more-->
+Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tutorials/hugo.html) notwendig.<!--more-->
 
 ## Struktur der Inhalte in Hugo
 Hugo geht davon aus, daß der Autor einer Webseite seine Inhalte bewußt in (z. B. thematische) Bereiche unterteilt. Üblicherweise nutzt man dazu Unterordner, d. h. im Ordner `content` könnte es so aussehen:

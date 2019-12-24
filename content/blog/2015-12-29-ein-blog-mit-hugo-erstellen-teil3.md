@@ -1,10 +1,11 @@
 +++
-title 		= "Ein Blog mit Hugo erstellen - Tutorial Teil 3 - Erstellen von Inhalten"
-date 		= "2015-12-29T22:25:17+01:00"
-description = "Eine Inhaltsseite wird erstellt: Dateikopf, Inhalt, einbinden von Inhalten wie Bildern, "
-keywords      = "Hugo, Webseite, Datum, Format, Inhalt, Markdown"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tutorial"]
+title 		    = "Ein Blog mit Hugo erstellen - Tutorial Teil 3 - Erstellen von Inhalten"
+date 		    = "2015-12-29T22:25:17+01:00"
+description     = "Eine Inhaltsseite wird erstellt: Dateikopf, Inhalt, einbinden von Inhalten wie Bildern, "
+keywords        = "Hugo, Webseite, Datum, Format, Inhalt, Markdown"
+software 	    = ["Webseiten", "Blog"]
+programme	    = ["Hugo"]
+tutorials 		= ["Hugo"]
 
 +++
 

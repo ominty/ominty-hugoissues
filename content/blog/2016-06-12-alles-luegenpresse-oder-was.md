@@ -1,7 +1,8 @@
 +++
 title 		= "Alles Lügenpresse - oder was?"
+description = "Feststellungen eines Kommunikationswissenschaftlers zur Situation unserer Medien"
 date 		= "2016-06-12"
-categories 	= ["Gebrabbel"]
+gebrabbel   = ["Gesellschaft"]
 
 +++
 

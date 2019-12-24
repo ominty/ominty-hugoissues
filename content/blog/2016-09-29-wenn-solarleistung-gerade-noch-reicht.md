@@ -1,8 +1,9 @@
 +++
 title 		= "Wenn die Solarleistung (gerade) noch reicht"
+description = "Vergleich der Tageskurven der Solaranlage zwischen Mai und September ortsgleich in Südfrankreich"
 date 		= "2016-09-29"
-categories 	= ["Reisen", "WOMO"]
-tags 		= ["Elektrik", "Solar"]
+reisen   	= ["Versorgung"]
+wohnmobile	= ["Blogartikel", "Elektrik", "Solar"]
 
 +++
 

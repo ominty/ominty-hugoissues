@@ -1,8 +1,8 @@
 +++
 title 		= "USB-Geräte abchecken"
+description = "Kurztipp zur Nutzung des Linux-Terminals bei Problemen mit angeschlossenen USB-Geräten"
 date 		= "2015-11-24T22:25:17+01:00"
-categories 	= ["Linux"]
-tags 		= ["Linux-Tipps", "Hardware"]
+linux		= ["Tipps", "Hardware"]
 
 +++
 

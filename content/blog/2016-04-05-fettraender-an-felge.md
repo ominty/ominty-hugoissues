@@ -1,8 +1,8 @@
 +++
 title 		= "Die Zeichen an der Wand bzw. an der Felge"
+description = "Manchmal sind es kleine Zeichen, die einen größeren drohenden Defekt anzeigen. Nicht immer sind die Zusammenhänge aber auf Anhieb zu erkennen."
 date 		= "2016-04-05"
-categories 	= ["Iveco"]
-tags 	    = ["Fahrzeugtechnik"]
+iveco       = ["Blogartikel", "Fahrzeugtechnik"]
 
 +++
 

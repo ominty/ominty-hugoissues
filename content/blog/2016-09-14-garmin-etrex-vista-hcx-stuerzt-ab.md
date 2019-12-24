@@ -1,8 +1,9 @@
 +++
 title 		= "Garmin etrex Vista HCx stürzt ab"
+description = "Probleme unterwegs mit meinem Garmin Vista. Große Kartenfiles fordern das Gerät offenbar sehr ..."
 date 		= "2016-09-14"
-categories 	= ["Navigation"]
-tags     	= ["Programme"]
+navigation  = ["Geräte", "Karten"]
+reisen      = ["Erfahrungen"]
 
 +++
 

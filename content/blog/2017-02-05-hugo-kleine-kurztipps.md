@@ -1,16 +1,25 @@
 +++
 title 		= "Hugo - kleine Kurztipps"
 date 		= "2017-02-05"
+lastmod     = "2019-03-21"
 description = "Eine kleine Sammlung von Codeschnipseln und Hinweisen, die immer mal wieder nützlich sein können"
-keywords      = "Hugo, Webseite, Datum, Format, Variablen"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+keywords    = "Hugo, Webseite, Datum, Format, Variablen"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
+
 +++
 
 Ich möchte hier eine kleine Sammlung anlegen von Dingen, die mir bei der Arbeit mit Hugo _in die Quere gekommen_ sind. Die Sammlung wird wohl immer wieder mal erweitert werden ...
 
+### Index
+* [Zeit/Datum formatieren]({{< ref "#datum-zeit-formatieren" >}})
+* [Seitenindex erstellen]({{<ref "#seitenindex-erstellen" >}})
+* [Falsches Template? Erstmal Variablen ermitteln]({{<ref "#falsches-template-erstmal-variablen-ermitteln" >}})
+* [Shortcodes dokumentieren]({{<ref "#shortcodes-dokumentieren" >}})
+<!--more-->
+
 ## Datum/Zeit formatieren
-Wird Hugo mit einem Standard-Thema verwendet, dann erscheinen Datumsangaben meist in der Form<!--more-->
+Wird Hugo mit einem Standard-Thema verwendet, dann erscheinen Datumsangaben meist in der Form
 
 > Mon, Jan 2, 2006
 
@@ -38,6 +47,30 @@ und es erscheint z. B. für diesen Artikel zum Tage der Erstveröffentlichung:
 > veröffentlicht am 05.02.2017
 
 ... das ist einfach.
+
+## Seitenindex erstellen
+Lange Seiten mit vielen Kapiteln und Unterkapiteln werden schnell unübersichtlich. Da ist es nützlich, am Seitenanfang einen Index, also ein kleines Inhaltsverzeichnis zu erstellen. Das kann eine Liste sein, die Links zu den einzelnen Kapitelüberschriften enthält.
+
+Hugo erstellt die Sprungmarken an den Überschriften automatisch, so wird z. B. aus dem Markdown-Text
+
+    ## Datum/Zeit formatieren
+
+ein HTML-Quelltext in der Form:
+
+    <h2 id="datum-zeit-formatieren">Datum/Zeit formatieren</h2>
+
+Im Index muß dann nur noch ein Eintrag in dieser Form erstellt werden - dabei wird der Hugo Shortcode `ref` benutzt:
+
+<!-- Um Shortcodes zu dokumentieren, müssen diese kommentiert (/* shortcode */) werden -->
+
+    * [Zeit/Datum formatieren]({{</* ref "#datum-zeit-formatieren" */>}})
+
+<!-- Achtung: Hugo Server und Hugo reagieren unterschiedlich auf die Kommentierungen: https://discourse.gohugo.io/t/how-is-the-hugo-doc-site-showing-shortcodes-in-code-blocks/9074/5 -->
+
+und es erscheint ein anklickbarer Verzeichniseintrag:
+
+> * [Zeit/Datum formatieren]({{<ref "#datum-zeit-formatieren" >}})
+
 
 ## Falsches Template? Erstmal Variablen ermitteln
 Hugo verfügt über klare Richtlinien, welches Template für die Darstellung welchen Inhalts verwendet wird. Manchmal wundert man sich trotzdem, warum "das falsche Template" gewählt wird.
@@ -82,3 +115,14 @@ Rel. Permalink: 	/blog/2017-02-05-hugo-kleine-kurztipps.html
 URL: 	/blog/2017-02-05-hugo-kleine-kurztipps.html      
 
 
+## Shortcodes dokumentieren
+Hugo kennt sog. [Shortcodes](https://gohugo.io/content-management/shortcodes/#readout), mit denen man Funktionalitäten vereinfachen kann.
+
+Diese können z. B. so aussehen (hier: ein youtube-Video einbinden):
+```
+{{</* youtube w7Ft2ymGmfc */>}}
+```
+Aber wie kann ich einen solchen Shortcode dokumentieren - z. B. hier im Blog in einem Beitrag zu einem Tutorial?     
+Unter bestimmten Bedingungen wird der Shortcode auch innerhalb eines Code-Blocks ausgeführt.
+
+Hugo kennt dazu ein Feature, das die Begrenzungen des Shortcodes auskommentieren läßt: Dazu muß dem jeweiligen Start- und Schluß-Zeichen des Shortcodes (`<`/`>` bzw. `%`) am Anfang des Shortcodes ein Kommentarzeichen folgen (so: `</*`) bzw. am Ende desselben vorangestellt werden (`*/>`).

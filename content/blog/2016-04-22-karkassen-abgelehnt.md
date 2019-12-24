@@ -1,8 +1,8 @@
 +++
 title 		= "Karkassen abgelehnt ... und die Auflösung"
+description = "Seit 16 Jahren lasse ich meine alten Karkassen für Winterprofil runderneuern - ohne Probleme. Diesmal sollen die Karkassen defekt gewesen sein - und dann doch nicht ..."
 date 		= "2016-04-22"
-categories 	= ["Iveco"]
-tags 	    = ["Fahrzeugtechnik"]
+iveco	    = ["Blogartikel", "Fahrzeugtechnik", "Bereifung"]
 
 +++
 

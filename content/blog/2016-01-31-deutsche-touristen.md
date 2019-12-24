@@ -1,8 +1,9 @@
 +++
 title 		= "Deutsche Touristen im Ausland"
+description = "Erinnerungen an eine Begebenheit im Lidl in Cordoba"
 date 		= "2016-01-31"
-categories 	= ["Reisen", "Gebrabbel"]
-tags 	    = ["Erfahrungen"]
+gebrabbel 	= ["Gesellschaft"]
+reisen 	    = ["Erfahrungen"]
 
 +++
 

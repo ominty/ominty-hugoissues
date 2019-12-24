@@ -8,8 +8,9 @@
 
 			 {{ .Content }}
 			<hr>
-			<p><small>zuletzt geändert am: {{ .Date.Format .Site.Params.DateForm }}</small></p>   <!-- Format seitenweit in config.toml definiert -->
+			<p class="small">zuletzt geändert am: {{ .Date.Format .Site.Params.DateForm }}</p>   <!-- Format seitenweit in config.toml definiert -->
 			
+            {{ partial "seitenanfang.html" . }}
 
     </article> 
    

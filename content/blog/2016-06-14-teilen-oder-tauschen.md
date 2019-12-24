@@ -1,7 +1,8 @@
 +++
 title 		= "Teilen oder Tauschen ... zu den Begrifflichkeiten und deren Anwendung in sozialen Netzwerken"
+description = "Was ist Tauschen, was ist Teilen - und woran kann ich beides unterscheiden? Gespräch im DLF"
 date 		= "2016-06-14"
-categories 	= ["Gebrabbel"]
+gebrabbel   = ["Gesellschaft"]
 
 +++
 

@@ -1,0 +1,11 @@
+    <section> 
+        <h2>{{ .Title }}</h2>
+        {{ $data := .Data }}
+        <ul>
+            {{ range $key,$value := .Data.Terms.ByCount }}
+                <li>
+                    <a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}.html">{{ $value.Name | humanize }}</a>
+                </li>
+            {{ end }}	 
+        </ul>
+    </section> 

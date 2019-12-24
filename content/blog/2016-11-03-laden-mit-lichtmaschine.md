@@ -1,9 +1,8 @@
 +++
 title 		= "Bordbatterie: Laden mit der Lichtmaschine (2)"
+description = "Ergänzung der letztjährigen Messungen im Stand durch ein Protokoll während der Fahrt"
 date 		= "2016-11-03"
-categories 	= ["Reisen", "WOMO"]
-tags 		= ["Elektrik", "Lichtmaschine"]
-
+wohnmobile  = ["Blogartikel", "Elektrik", "Lichtmaschine"]
 +++
 
 Weil die Solarleistung um diese Jahreszeit immer geringer wird ([siehe letzter Beitrag](/blog/2016-11-02-solarleistung-es-wird-winter.html)), habe ich mir also die Kurven auf der Rückreise von einem Kurztrip genauer angeschaut. Dabei besonders interessiert hat mich aufgrund der [letztjährigen Messungen im Stand](/blog/2015-12-25-laden-mit-lichtmaschine.html), wie sich die Unterstützung durch die Lichtmaschine darstellt: <!--more-->

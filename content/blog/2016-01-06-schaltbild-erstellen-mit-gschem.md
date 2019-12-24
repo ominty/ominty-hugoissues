@@ -1,8 +1,9 @@
 +++
 title 		= "Schaltbild erstellen mit gschem, erste Schritte"
+description = "Einrichtung von gEDA incl. Einbindung lokaler zusätzlicher Bauelemente-Symbole"
 date 		= "2016-01-06"
-categories 	= ["CAD"]
-tags 		= ["gEDA", "Programmeinrichtung"]
+software 	= ["CAD"]
+programme	= ["gEDA"]
 
 +++
 

@@ -1,8 +1,8 @@
 +++
 title 		= "Bordbatterie: Laden mit der Lichtmaschine"
+description = "Welcher Anteil am Stromverbrauch ist durch die Lichtmaschine während der Fahrt zu decken? Messungen mit der einfachen Trennrelais-Lösung"
 date 		= "2015-12-25"
-categories 	= ["Reisen", "WOMO"]
-tags 		= ["Elektrik", "Lichtmaschine"]
+wohnmobile	= ["Blogartikel", "Elektrik", "Lichtmaschine"]
 
 +++
 

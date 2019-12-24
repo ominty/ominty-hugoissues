@@ -2,9 +2,9 @@
 title 		= "Homepage überarbeitet"
 date 		= "2017-01-29"
 description = "Neustart dieser Homepage, warum - was - wie? Es geht um Inhalte, Form und Technik unter der Haube"
-keywords      = "Hugo, Webseite, Neustart"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+keywords    = "Hugo, Webseite, Neustart"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
 +++
 
 Ein paar Dinge kommen zusammen:  <!--more-->
@@ -15,7 +15,7 @@ Ein paar Dinge kommen zusammen:  <!--more-->
 1. je größer/umfangreicher ein Internet-Auftritt wird, desto schwerer ist er manuell "zu bändigen"
 1. ich muß andere Internetauftritte ebenfalls überarbeiten
 
-und so habe ich mich entschlossen,  diese Homepage als "Testobjekt" zu nutzen und nicht nur das Blog, sondern komplett auf [Hugo](/tags/hugo.html) umzustellen.
+und so habe ich mich entschlossen,  diese Homepage als "Testobjekt" zu nutzen und nicht nur das Blog, sondern komplett auf [Hugo](/programme/hugo.html) umzustellen.
 
 ## Das Konzept
 

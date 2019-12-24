@@ -1,8 +1,10 @@
 +++
 title 		= "Wegpunkte aus Texten und Tabellen importieren"
+description = "Wegpunkte oder sonstige Koordinaten stehen als Tabelle oder Textfile, nicht aber in einem navigationsgeräte-tauglichen Format zur Verfügung. Eine Kurzanleitung zur Konvertierung."
 date 		= "2016-09-04"
-categories 	= ["Navigation"]
-tags     	= ["Programme"]
+software 	= ["Navigation"]
+programme  	= ["gpsbabel"]
+navigation  = ["Karten"]
 
 +++
 

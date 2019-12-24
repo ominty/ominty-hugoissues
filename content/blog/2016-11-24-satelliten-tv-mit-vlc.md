@@ -1,10 +1,11 @@
 +++
 title 		= "DVB-S: Satelliten-TV mit VLC unter Linux"
+description = "Schrittweise Beschreibung der Inbetriebnahme einer Satelliten-Tuner-Karte in einem Linux-Rechner"
 date 		= "2016-11-24"
-description = "Struktur einer Webseite für den Einsatz von Hugo, es werden erläutert: Verzeichnisse, Bereiche, Dokumententypen"
-keywords      = "Hugo, Webseite, Struktur, Verzeichnis, Template, Theme, Menü"
-categories 	= ["Linux", "Medien"]
-tags 		= ["Programme"]
+keywords    = "DVB-S, Linux, VLC, w_scan, Suchlauf, Aufnahme"
+medien      = ["Fernsehen"]
+programme	= ["VLC", "w_scan"]
+linux       = ["Hardware"]
 
 +++
 
@@ -87,3 +88,4 @@ Außerdem muß ein Aufnahmeverzeichnis angegeben werden, in dem die aufgenommene
 Somit ist alles erledigt und es kann losgehen ... 
 
 ![VLC-Player im Fernsehbetrieb](/bilder/2016-11/vlc-05-betrieb.png)
+

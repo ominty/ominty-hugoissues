@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ with .Title }}{{.}} auf {{ end }}{{ .Site.Title }}</title>
+    <title>Blogfeed: {{ with .Title }}{{.}} auf {{ end }}{{ .Site.Title }}</title>
     <link>{{ .Permalink }}</link>
     <description>Neue Beiträge {{ with .Title }}in {{.}} {{ end }}auf der Seite {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}

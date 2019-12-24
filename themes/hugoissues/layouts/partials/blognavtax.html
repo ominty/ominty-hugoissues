@@ -1,0 +1,12 @@
+    <section>
+    <h2>Rubriken</h2>
+        <ul>
+            {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+            {{ if ne $taxonomyname "main" }} <!-- "Main" ausblenden im Seitenmenü -->
+              <li>
+                <a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}.html">{{ $taxonomyname | humanize }}</a>
+              </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </section>

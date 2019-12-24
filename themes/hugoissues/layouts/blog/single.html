@@ -3,16 +3,20 @@
 <div class="canvasContent">
     <article>
       <!--Seiteninhalt-->
-            <p class="screen"><small>
-                {{if .PrevInSection}}<a href="{{.PrevInSection.RelPermalink}}"><<< vorheriger Artikel</a>{{end}} - - - 
-                {{if .NextInSection}}<a href="{{.NextInSection.RelPermalink}}">nächster Artikel >>></a>{{end}}
-            </small></p>
+            <div class="screen"><ul class="umblaettern">
+                <li>{{if .PrevInSection}}<a href="{{.PrevInSection.RelPermalink}}"><<< vorheriger Artikel</a>{{end}}</li>
+                <li>{{if .NextInSection}}<a href="{{.NextInSection.RelPermalink}}">nächster Artikel >>></a>{{end}}</li>
+                </ul>
+            </div>
             
 			<h1>{{ .Title }}</h1>
 			
-			<span><small>veröffentlicht am {{ .Date.Format .Site.Params.DateForm }}
-
-                in 
+            <p class="small">veröffentlicht am {{ .Date.Format .Site.Params.DateForm }}
+                {{ if ne .Date .Lastmod }}
+                    - aktualisiert am {{ .Lastmod.Format .Site.Params.DateForm }}
+                {{ end }} mit {{ .WordCount }} Worten - Lesezeit: {{ .ReadingTime }} Minute(n)
+                
+                <!-- in --> 
 				{{ range $i, $e :=.Params.categories }}
 					{{if $i}} , {{end}}
 					<a href="/categories/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
@@ -28,10 +32,24 @@
 				{{ end }}
 				
 				
-			</small></span>
+			</p>
+			
+            <!-- {{ partial "toc.html" . }} -->
 
-			<br>
 			{{ .Content }}
+
+            {{ partial "seitenanfang.html" . }}
+
+            {{ partial "share.html" . }}
+
+			<hr>
+
+
+<!-- Kommentarbox -->
+<p>&nbsp;</p>
+	<script type="text/javascript" src="https://privat.albicker.org/hashover/comments.php"></script>
+    <noscript>Ohne Java-Script gibt's leider keine Kommentare zu sehen ...</noscript>
+<!-- Ende Kommentarbox -->
 
 
     </article> 

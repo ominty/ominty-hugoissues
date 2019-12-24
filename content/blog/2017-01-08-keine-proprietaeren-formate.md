@@ -1,10 +1,10 @@
 +++
 title 		= "Warum ich proprietäre Formate meide"
-date 		= "2017-01-08"
 description = "Problematik firmenspezifischer Dateiformate am Beispiel Microsoft Word und Harvard Graphics im Rückblick der vergangenen 20 Jahre"
-keywords      = "Dateiformat, proprietär, offen, Protokoll, Microsoft Word, Harvard Graphics"
-categories 	= ["Software"]
-tags     	= ["Programme"]
+date 		= "2017-01-08"
+keywords    = "Dateiformat, proprietär, offen, Protokoll, Microsoft Word, Harvard Graphics"
+software    = ["Office"]
+programme   = ["MS Word", "LibreOffice", "Harvard Graphics"]
 
 +++
 

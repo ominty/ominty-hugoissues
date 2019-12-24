@@ -1,8 +1,8 @@
 +++
 title 		= "Ersatzteilversorgung - jetzt wird's blöd!"
+description = "Verfügbarkeit und Lieferzeiten für Ersatzteile des Daily 2 und Daily 96 - Die Besitzer müssen sich zunehmend in Geduld üben, schlecht, wenn unterwegs ein Defekt auftritt"
 date 		= "2016-03-31"
-categories 	= ["Iveco"]
-tags 	    = ["Fahrzeugtechnik"]
+iveco 	    = ["Blogartikel", "Fahrzeugtechnik", "Ersatzteile"]
 
 +++
 

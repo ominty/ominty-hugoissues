@@ -1,8 +1,9 @@
 +++
 title 		= "PDF-Dateien verkleinern"
+description = "Eingescannte Dokumente haben manchmal ärgerlich große Dateigrößen. Wenn es sich um reine Textdokumente handelt, dann kann dem abgeholfen werden."
 date 		= "2016-09-12"
-categories 	= ["Software"]
-tags     	= ["Programme"]
+software    = ["Office"]
+programme   = ["ghostscript", "image magick"]
 
 +++
 

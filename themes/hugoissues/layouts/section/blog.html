@@ -12,15 +12,16 @@
 				</h1>
 
 				{{ .Content }}
-
+				
+				
 <!-- in Überschrift evtl. Variable einsetzen, welches Tag/welche Kategorie gelistet wird -->
 
-                {{ $paginator := .Paginate (where .Data.Pages "Section" "blog") }}
+                {{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog") }}
 				{{ range $paginator.Pages }}    <!-- .Paginator speichert Infos zur Seitenaufteilung -->
 				    {{ if ne .Params.menu "main" }}		<!-- falls .Params.menu NICHT "main" entspricht -->	
                         <h3><a href="{{.RelPermalink}}">{{ .Title }}</a></h3>
-                        <span><small>vom {{ .Date.Format .Site.Params.DateForm }}
-                        in 
+                        <p class="small">vom {{ .Date.Format .Site.Params.DateForm }}
+                        <!-- in --> 
         				{{ range $i, $e :=.Params.categories }}
         					{{if $i}} , {{end}}
         					<a href="/categories/{{ . | urlize }}.html">{{ . }}</a> <!-- ".html" einfügen für 'uglyURLs = true' -->
@@ -35,7 +36,11 @@
             			{{ end }}
         				{{ end }}                        
                         
-                        </small></span>                      
+                        </p>         
+                        <!-- Artikelbild aus Frontmatter einfügen -->
+                        {{ if .Params.artikelbild }}
+                            <a href="{{.RelPermalink}}"><img src="{{ .Params.artikelbild | relURL }}" alt="" class="li"></a>
+                        {{ end }}
                         
                         <p>
                         {{if .Params.Description }}
@@ -52,7 +57,7 @@
                     {{ end }}
 			    {{ end }}
         
-        <p><small>{{ .Paginator.TotalNumberOfElements }} Blogbeiträge</small></p>
+        <p class="small">{{ .Paginator.TotalNumberOfElements }} Blogbeiträge</p>
 		<hr>
         <p align="center">
             
@@ -67,30 +72,18 @@
             {{ end }}
              
         </p>
-        
+
+            {{ partial "seitenanfang.html" . }}
+
     </article>
-   
+
    
     <aside> 
+     
+        {{ partial "blognavtax.html" . }}
 
-	    <section>  
-        <h2>Rubriken (Categories)</h2>        
-        <p class="widget">
-            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                <a href="/categories/{{ $name | urlize }}.html">{{ $name }}</a>,&nbsp;
-            {{ end }}
-        </p>
-        </section>
-
-	    <section>  
-        <h2>Schlagworte (Tags)</h2>	    
-        <p class="widget">
-            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                <a href="/tags/{{ $name | urlize }}.html">{{ $name }}</a>,&nbsp;
-            {{ end }}
-        </p>
-        </section>
-
+        {{ partial "meistgelesen.html" . }}
+        
     </aside>
 </div>  
  

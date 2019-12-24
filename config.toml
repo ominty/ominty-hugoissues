@@ -1,59 +1,74 @@
-baseurl = "http://privat.albicker.org"
-languageCode = "de-DE"
-title = "Iveco Daily 4x4, Hunde und multithematisches Blog - Bernhard Albicker"
+baseurl         = "https://privat.albicker.org"
+languageCode    = "de-DE"
+title           = "Iveco Daily 4x4, Hunde und multithematisches Blog"
 
-uglyURLs = true             
-relativeURLs = true         
-canonifyURLs = false        
+uglyURLs        = true             
+relativeURLs    = true         
+canonifyURLs    = false
 
-theme = "hugoissues"
+enableEmoji     = true        
+
+theme           = "hugoissues"
 
 defaultContentLanguage = "de"
 
-[languages]
-[languages.de]
-LanguageName = "deutsch"
-title = "My blog"
-weight = 1
-linkedin = "english-link"
+# PreserveTaxonomyNames   = true        # https://github.com/spf13/hugo/issues/3037 Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
 
-[languages.en]
-LanguageName = "english"
-copyright = "Tout est à moi"
-title = "Mon blog"
-weight = 2
-linkedin = "lien-francais"
+pluralizeListTitles     = false
 
-PreserveTaxonomyNames = true        # Kategorien und Tags bleiben in orig. Schreibweise (Groß-/klein)
+rssLimit        = 2000000           # https://github.com/spf13/hugo/issues/3145
+
+[taxonomies]
+#    category    = "categories"      # "" turns off default taxonomy
+#    tag         = "tags"
+    
+#    basisfahrzeug   = "basisfahrzeuge"     # derzeit noch leer
+    gebrabbel       = "gebrabbel"
+    hund            = "hunde"
+    iveco           = "iveco"
+    linux           = "linux"
+    medien          = "medien"
+    navigation      = "navigation"    
+    programm        = "programme"
+    reise           = "reisen"
+    software        = "software"
+    tutorial        = "tutorials"    
+    wohnmobil       = "wohnmobile"
+
 
 # Definition für das Hauptmenü  Identifier und url müssen GLEICH sein
 SectionPagesMenu = "main"   
- [[menu.main]]
-        name = "Wohnmobil"
-        weight = 20
-        identifier = "ivecowomo"
-        url = "/ivecowomo/start.html"
- [[menu.main]]
-        name = "Hunde"
-        weight = 30
-        identifier = "hund"
-        url = "/hund/steckbrief.html"
- [[menu.main]]
-        name = "Blog"
-        weight = 40
-        identifier = "blog"
-        url = "/blog.html"
- [[menu.main]]
-        name = "Kontakt"
-        weight = 50
-        identifier = "kontakt"
-        url = "/kontakt/form.html"
+[[menu.main]]
+    name        = "Iveco Technik"
+    weight      = 10
+    identifier  = "iveco-technik"
+    url         = "/iveco-technik/technik1.html"
+[[menu.main]]
+    name        = "Wohnmobil"
+    weight      = 20
+    identifier  = "iveco-womo"
+    url         = "/iveco-womo/anfang.html"
+[[menu.main]]
+    name        = "Hunde"
+    weight      = 30
+    identifier  = "hund"
+    url         = "/hund/steckbrief.html"
+[[menu.main]]
+    name        = "Blog"
+    weight      = 40
+    identifier  = "blog"
+    url         = "/blog.html"
+[[menu.main]]
+    name        = "Kontakt"
+    weight      = 50
+    identifier  = "kontakt"
+    url         = "/kontakt/formular.php"
         
         
 # Global geltende eigene Variablen        
 [Author]
-name = "Bernhard Albicker"
-email = "spam@spam.com"
+name            = "Bernhard"
+email           = "spam@spam.com"
 
 
 [params]
@@ -63,11 +78,29 @@ email = "spam@spam.com"
     use_summaries = true
 
     # Datumsformat: es müssen diese Angaben verwendet werden: "Mon, 2. Jan. 2006", nur die Reihenfolge darf geändert werden
-    DateForm = "02.01.2006"
+    DateForm    = "02.01.2006"
 
     # alternativer Titel für die Seiten im Blog-Bereich
-    BlogTitle = "Seiten, die die Welt (nicht) braucht"
+    BlogTitle   = "Das Blog: Seiten, die die Welt (nicht) braucht"
     
     # copyright
-    copyright = "Bernhard Albicker"
+    copyright   = "Bernhard Albicker"
 
+
+
+# EU-DSGVO
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = false
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true

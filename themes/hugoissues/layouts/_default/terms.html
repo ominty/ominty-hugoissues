@@ -2,33 +2,41 @@
 
 <div class="canvasContent">
     <article>
-      <h2>Die neuesten Artikel</h2>
-      {{- range first 3 .Data.Pages }}
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>    <!-- .RelPermalink anstelle .Permalink für portable Seiten -->
-    <p>  {{ .Description }} </p>
-      {{- end }}
+        {{ if .Params.Title }}
+            <h1 id="title">{{ .Params.Title }}</h1>
+        {{ else }}
+            <h1 id="title">Artikel in der Rubrik <em>{{ .Title }}</em></h1>
+        {{ end }}
+        {{ .Content }}
+        <p class="small">Es werden jeweils die 3 neuesten Artikel pro Schlagwort angezeigt.</p>
+    
+        {{ $data := .Data }}
+        {{ range $key,$value := .Data.Terms.ByCount }}
+        <h2><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}.html">{{ $value.Name | humanize }}</a><small> -  {{ $value.Count }} Artikel</small></h2>
+        {{ range first 3 $value.Pages.ByDate.Reverse }}
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="small">vom {{ .Date.Format .Site.Params.DateForm }}</p>
+            {{if .Params.Description }}
+                <p><em>{{ .Description }}</em></p>
+            {{ else }}
+                {{ .Summary }}
+            {{ end }}
+        {{ end }}
+        {{ if gt $value.Count 3 }}        
+            <div class="read-more-link" style="text-align: right; font-style: italic; font-size: .85em; ">
+                <a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}.html">alle Artikel zu "{{ $value.Name | humanize }}" anzeigen >>></a>
+            </div>
+        {{ end }}
+            <p>&nbsp;</p>
+        {{ end }}
 
 
-
-</article>
+    </article>
    
    <aside> 
-	 <section> 
-	 <h2>Kontakt</h2> 
-		 <ul> 
-		 <li><a href="link_1.html">Wiki</a></li> 
-		 <li><a href="link_2.html">Blog</a></li> 
-		 <li><a href="link_3.html">Forum</a></li> 
-		 </ul> 
-	 </section> 
-	 <section> 
-	 <h2>Weiterführende Links</h2> 
-		 <ul> 
-		 <li><a href="link_1.html">Wiki</a></li> 
-		 <li><a href="link_2.html">Blog</a></li> 
-		 <li><a href="link_3.html">Forum</a></li> 
-		 </ul> 
-	 </section> 
+
+        {{ partial "blognavterm.html" . }} 
+
    </aside> 
 </div>  
  

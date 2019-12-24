@@ -3,9 +3,9 @@ title 		= "Schlangenbiß beim Hund"
 linktitle   = "Schlangenbiß"
 date 		= "2006-07-22"
 description = "Ein Schlangenbiß muß auch in unseren Breiten und bei heimischen Schlangenarten ernst genommen werden"
-keywords      = "Hund, Schlange, Biß, Gift"
-weight = 5
-categories 	= ["Hunde"]
+keywords    = "Hund, Schlange, Biß, Gift"
+weight      = 5
+hunde       = ["Homepage", "Medizin"]
 
 +++
 

@@ -2,9 +2,9 @@
 title 		= "Markdown-Spickzettel - eine Kurzreferenz"
 date 		= "2016-01-09"
 description = "Eine Zusammenstellung der Formatierungsmöglichkeien von Inhaltsseiten mit Markdown"
-keywords      = "Hugo, Webseite, Markdown, Formatierung"
-categories 	= ["Webseiten"]
-tags 		= ["Referenz", "Hugo"]
+keywords    = "Hugo, Webseite, Markdown, Formatierung"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
 
 +++
 

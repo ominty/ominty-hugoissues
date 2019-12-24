@@ -1,8 +1,8 @@
 +++
 title 		= "Terminal-Ausgabe mitprotokollieren"
+description = ""
 date 		= "2016-10-10"
-categories 	= ["Linux"]
-tags 		= ["Linux-Tipps"]
+linux		= ["Tipps"]
 +++
 
 

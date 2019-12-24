@@ -30,7 +30,7 @@ Werden in solch einem chronologischen Blog unterschiedliche Themen behandelt, so
 
 ## Dieses Blog
 ### Ergänzung der thematischen Berichte
-Mein erstes Blog habe ich 2014 für meine Fotoseite eingerichtet, um dort diejenigen Themen behandeln zu können, die einen gewissen aktuellen Bezug haben: Fotos zu bestimmten Jahreszeiten, Sonnen- oder Mondfinsternis, oder eben neue oder interessante Ausrüstungsgegenstände. Dieses Blog läuft _traditionell_ mit einem Softwaresystem auf dem Server und wird über eine Maske im Browser bedient. Aufgrund der Nachteile (ständige Systempflege und der notwendigen Online-Verbindung zum Erstellen von Beiträgen) habe ich mich dann nach einem _statischen Webseiten-Generator_ umgesehen und hier auf dieser Seite ein "Versuchsblog" eingerichtet zum Systemtest.
+Mein erstes Blog habe ich 2014 für meine Fotoseite eingerichtet, um dort diejenigen Themen behandeln zu können, die einen gewissen aktuellen Bezug haben: Fotos zu bestimmten Jahreszeiten, Sonnen- oder Mondfinsternis, oder eben neue oder interessante Ausrüstungsgegenstände. Dieses Blog lief _traditionell_ mit einem Softwaresystem auf dem Server und wird über eine Maske im Browser bedient. Aufgrund der Nachteile (ständige Systempflege und der notwendigen Online-Verbindung zum Erstellen von Beiträgen) habe ich mich dann nach einem _statischen Webseiten-Generator_ umgesehen und hier auf dieser Seite ein "Versuchsblog" eingerichtet zum Systemtest.
 
 Es kam, wie es kommen mußte: in kurzer Zeit waren etliche Beiträge geschrieben, und ich werde diese Blog wohl weiterleben lassen: 
 

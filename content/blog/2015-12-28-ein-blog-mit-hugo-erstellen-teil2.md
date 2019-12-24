@@ -1,10 +1,11 @@
 +++
-title 		= "Ein Blog mit Hugo erstellen - Tutorial Teil 2 - Einrichtung der Seitenstruktur"
-date 		= "2015-12-28T22:25:17+01:00"
-description = "Einrichtung der Verzeichnisstruktur der künftigen Webseite, Bedeutung der Hugo-Arbeitsverzeichnisse, Aufbau einer Inhaltsseite mit Seitenkopf und dem eigentlichen Inhalt"
-keywords      = "Hugo, Webseite, Verzeichnis, Struktur, Seitenkopf, Inhalt"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tutorial"]
+title 		    = "Ein Blog mit Hugo erstellen - Tutorial Teil 2 - Einrichtung der Seitenstruktur"
+date 		    = "2015-12-28T22:25:17+01:00"
+description     = "Einrichtung der Verzeichnisstruktur der künftigen Webseite, Bedeutung der Hugo-Arbeitsverzeichnisse, Aufbau einer Inhaltsseite mit Seitenkopf und dem eigentlichen Inhalt"
+keywords        = "Hugo, Webseite, Verzeichnis, Struktur, Seitenkopf, Inhalt"
+software 	    = ["Webseiten", "Blog"]
+programme	    = ["Hugo"]
+tutorials 		= ["Hugo"]
 
 +++
 

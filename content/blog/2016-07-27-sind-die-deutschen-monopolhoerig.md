@@ -1,7 +1,9 @@
 +++
-title 		= "Sind die Deutschen monopolhörig?"
-date 		= "2016-07-27"
-categories 	= ["Gebrabbel"]
+title 		   = "Sind die Deutschen monopolhörig?"
+description    = "Die besonders in Deutschland vielgeschmähte Datenkrake Google hat gerade in Deutschland einen sehr hohen Marktanteil ..."
+date 		      = "2016-07-27"
+gebrabbel      = ["Gesellschaft", "Wirtschaft"]
+software			= ["Datenschutz"]
 
 +++
 

@@ -1,0 +1,19 @@
+<!-- Statische Buttons einbinden -->
+<div class="social-media">
+<br><p>Diesen Artikel weiterempfehlen:&nbsp;&nbsp;
+<a style="background: #5DB5DE; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Twitter empfehlen" href="https://twitter.com/intent/tweet?source=webclient&text={{ .Title }} {{ .Permalink }}" target="blank" rel="nofollow"><span>Twitter</span></a> 
+
+<a style="background: #3D62B3; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Facebook empfehlen" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&t={{ .Title }}" target="blank" rel="nofollow"><span>Facebook</span></a> 
+
+<a style="background: #C21F25; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Pinterest pinnen" href="https://www.pinterest.com/pin/create/link/?url={{ .Permalink }}&media={{ with .Params.artikelbild }}{{ . | absURL }}{{ end }}&description={{ .Title }}" target="blank" rel="nofollow"><span>Pinterest</span></a> 
+
+<a style="background: #34AF23; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Whatsapp teilen" href="https://wa.me/?text={{ .Title }} {{ .Permalink }}" target="blank" rel="nofollow"><span>Whatsapp</span></a> 
+
+<!-- <a style="background: #36465D; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Tumblr teilen" href="http://www.tumblr.com/share/link?url={{ .Permalink }}&name={{ .Title }}&description={{ .Description }}" target="blank" rel="nofollow"><span>Tumblr</span></a>  -->
+
+<a style="background: #126567; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Xing teilen" href="https://www.xing.com/spi/shares/new?{{ .Permalink }}" target="blank" rel="nofollow"><span>Xing</span></a> 
+
+<a style="background: #0077B5; color: #fff; padding: 0px 5px 0px 5px;" title="Bei Linkedin mitteilen" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="blank" rel="nofollow"><span>Linkedin</span></a> 
+
+<a style="background: #929292; color: #fff; padding: 2px 5px 3px 5px;" title="Per e-mail empfehlen" href="mailto:?subject={{ .Title }}&amp;body={{ .Description }}%0A{{ .Permalink }}%09"  target="blank" rel="nofollow"><span>e-m@ail</span></a></div></p><br>
+<!-- /Statische Buttons einbinden -->

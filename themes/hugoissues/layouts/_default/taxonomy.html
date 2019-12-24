@@ -7,7 +7,7 @@
 		{{ if .Site.Params.strings.posts_list_header }}
 			{{ .Site.Params.strings.posts_list_header }}
 		{{ else }}
-			Inhaltsverzeichnis: {{ .Title | humanize }}
+			Artikel zum Thema <em>{{ .Title | humanize }}</em> in der Rubrik <em>{{ .Data.Plural | humanize }}</em>
 		{{ end }}</h1>
 <!-- in Überschrift evtl. Variable einsetzen, welches Tag/welche Kategorie gelistet wird -->
 
@@ -15,25 +15,31 @@
 			{{ if ne .Params.menu "main" }}			
 				{{- if and (ne .Type "teaser") (ne .Type "liste")}}                        
                     <h3><a href="{{.RelPermalink}}">{{ .Title }}</a></h3>
-                    <p><small>vom {{ .Date.Format .Site.Params.DateForm }}</small></p> 
+                    <p class="small">vom {{ .Date.Format .Site.Params.DateForm }}</p> 
                     {{ if .Description }}
                     	<p>{{ .Description }}</p>
                     {{ else }}
                     	<p>{{ .Summary }}</p>
                     {{ end }}
                     
-                    <!-- <p>&nbsp;</p> -->
-					<hr>
+                <p>&nbsp;</p>
 	        	{{ end }}
         	{{ end }}
 	    {{ end }}
+			<div class="read-more-link" style="text-align: center; font-style: italic; font-size: 1em; ">
+    			<p><a href="javascript:history.back()"> <<< zurück </a></p>
+    		</div>
+
+  
     </article>
-   
+
    <!-- <aside> 
 	 
-        	{{ partial "sidenav.html" . }} 
+        {{ partial "blognavterm.html" . }} 
+
+        {{ partial "blognavtax.html" . }}
 	  
-   </aside>  -->
+   </aside> --> 
 </div>  
  
 {{ partial "footer.html" . }}

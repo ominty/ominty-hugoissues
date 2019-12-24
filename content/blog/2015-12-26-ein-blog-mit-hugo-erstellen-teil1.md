@@ -1,10 +1,11 @@
 +++
-title 		= "Ein Blog mit Hugo erstellen - Tutorial Teil 1 - Installation"
-date 		= "2015-12-26T22:25:17+01:00"
-description = "Kurze Beschreibung, wie Hugo installiert wird unter Linux und Windows. Ebenfalls beschrieben wird ein kurzer Probelauf"
-keywords      = "Hugo, Webseite, Installation, Probelauf, Windows, Linux"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tutorial"]
+title 		    = "Ein Blog mit Hugo erstellen - Tutorial Teil 1 - Installation"
+date 		    = "2015-12-26T22:25:17+01:00"
+description     = "Kurze Beschreibung, wie Hugo installiert wird unter Linux und Windows. Ebenfalls beschrieben wird ein kurzer Probelauf"
+keywords        = "Hugo, Webseite, Installation, Probelauf, Windows, Linux"
+software 	    = ["Webseiten", "Blog"]
+programme	    = ["Hugo"]
+tutorials 		= ["Hugo"]
 
 +++
 

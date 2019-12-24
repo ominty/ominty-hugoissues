@@ -3,8 +3,9 @@ title 		= "Ich mag uglyURLs"
 date 		= "2017-02-14"
 description = "Hugo kann uglyURLs oder prettyURLs ausgeben. Ich bevorzuge erstere und erkläre, warum das aus meiner Sicht sinnvoll ist"
 keywords    = "Hugo, URL, ugly, pretty, Link"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
+
 +++
 
 Ich weiß nicht, wer diese Begrifflichkeiten geprägt hat: "ugly URL" (häßliche Adresse) und im Gegensatz dazu die "pretty URL". Aufgefallen sind mir die Begrifflichkeiten zuerst <!--more--> in der Dokumentation zu den statischen Webseitengeneratoren Jekyll und Hugo.

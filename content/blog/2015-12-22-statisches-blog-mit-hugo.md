@@ -2,9 +2,9 @@
 title 		= "Statische Webseiten/Blogs mit Hugo"
 date 		= "2015-12-22T22:25:17+01:00"
 description = "Was ist ein Generator für statische Webseiten? Worin unterscheidet er sich von einem System wie z. B. dem verbreiteten Wordpress? Welche Vor-/Nachteile haben die beiden Varianten?"
-keywords      = "Hugo, Webseite, statisch, Template, Vorteil, Nachteil, Wartung, Ladezeit, Backup"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Blog"]
+keywords    = "Hugo, Webseite, statisch, Template, Vorteil, Nachteil, Wartung, Ladezeit, Backup"
+software 	= ["Webseiten", "Blog"]
+programme	= ["Hugo"]
 
 +++
 Seit wenigen Jahren scheinen "Generatoren für statische html-Seiten" sich wachsender Beliebtheit zu erfreuen.

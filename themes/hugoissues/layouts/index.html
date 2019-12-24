@@ -13,9 +13,9 @@
 	</section>    
     
 	<section>
-	{{ range where .Data.Pages "Type" "teaser" }}
+	{{ range where .Site.RegularPages "Type" "teaser" }}
 	<div class="teaser">
-		<a id="teaser-linkbox" href="/{{ .Section }}/index.html">
+		<a id="teaser-linkbox" href="/{{ .Section }}.html">
 				<!-- {{ .Title }} -->
 				{{ .Content }}
 		</a>
@@ -26,16 +26,30 @@
     <section>  
 	    <div id="vorschau">
 		    <h2>Die neuesten Artikel</h2>
-			    {{ range first 3 .Data.Pages.ByDate.Reverse }}   
-			    <!-- es sollen die AKTUELLSTEN 3 Artikel  aller Bereiche erscheinen, wichtig, wenn in den Bereichen mit Gewichtung gearbeitet wird --> 
-			    <!-- range first 3 (where .Data.Pages "Section" "blog") => nur die letzten 3 BLOG-Artikel -->
+			    {{ range first 5 (where .Site.Pages.ByDate.Reverse "Section" "blog") }}   
 					<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>    <!-- .RelPermalink anstelle .Permalink für portable Seiten -->
-				    <span><small>vom {{ .Date.Format .Site.Params.DateForm }}</small></span>
+				    <p class="small">vom {{ .Date.Format .Site.Params.DateForm }}</p>
 				    <p>  {{ .Description }} </p>
 			    {{ end }}
+            <p>&nbsp;</p>
+            <h2>Die meistgelesenen Artikel</h2>
+                {{ range (where .Site.Pages ".Params.meistgelesen" "1" ) }}
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> 
+                    <p>  {{ .Description }} </p>
+                {{ end }}
 	    </div>
 	</section>
 
+
+<!-- Suchscript https://webdesign.weisshart.de/ -->
+<form  id="search" method="get" action="suchen.php">
+<p>
+<label for="suchbegriff">Im Projekt suchen:</label>
+<input type="text" name="q" id="suchbegriff" placeholder="Suchbegriff(e) eingeben" value="" />
+<input type="submit" value="Los !" />
+</p>
+</form>
+<!-- Ende https://webdesign.weisshart.de/ -->
 
 
 </article>

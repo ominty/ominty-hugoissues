@@ -11,16 +11,21 @@ weight = "7"
 ## Inhaltliche Haftung und Links
 
 *   Der Inhalt der einzelnen Rubriken dieser Hompage wurde sorgfältig recherchiert. Trotzdem kann für Aktualität und Richtigkeit des Dargestellten keine Gewähr übernommen werden. Eine Haftung für Schäden, die durch die Nutzung dieser Informationen auftreten, ist deshalb ausgeschlossen.
-*   Für Eintragungen im Gästebuch zeichnet der jeweilige Autor verantwortlich. Die dort verbreiteten Aussagen sind deshalb nicht Bestandteil des redaktionellen Teils dieser Homepage.
+<!-- *   Für Eintragungen im Gästebuch zeichnet der jeweilige Autor verantwortlich. Die dort verbreiteten Aussagen sind deshalb nicht Bestandteil des redaktionellen Teils dieser Homepage. -->
 *   Obwohl Links zu externen Seiten regelmäßig geprüft werden, kann eine Verantwortung für Funktion dieser Links sowie für den Inhalt dieser verlinkten Seiten nicht übernommen werden, da externe Seiten nicht im Einflußbereich des Betreibers dieser Homepage liegen.
+*   P.S.: zu den Social-Media-Buttons im Blog gibt es [=> diesen Artikel](/blog/2017-03-22-social-media-buttons.html).
 
 ## e-mail-Adressen
 
-werden von mir grundsätzlich vertraulich behandelt.
+werden von mir grundsätzlich vertraulich behandelt. Näheres dazu findet sich in der [Datenschutzerklärung](/kontakt/datenschutz.html) dieser Seiten.
 
-Im Gästebuch hinterlassene e-mail-Adressen sind **nicht** über die Homepage zugänglich, um Mißbrauch auszuschließen.  
+<!-- Im Gästebuch hinterlassene e-mail-Adressen sind **nicht** über die Homepage zugänglich, um Mißbrauch auszuschließen.  
 Um Homepage-Besuchern trotzdem die Möglichkeit zu geben, untereinander in Kontakt zu kommen, biete ich, sofern der jeweilige Verfasser eines Beitrages eine e-mail-Adresse angibt, ein Antwortformular an, dessen Inhalt an ihn weitergeleitet wird.  
-Es bleibt dann dem Verfasser selbst überlassen, zu antworten - oder eben nicht...
+Es bleibt dann dem Verfasser selbst überlassen, zu antworten - oder eben nicht... -->
+
+## Nutzung der auf dieser Webseite zur Verfügung gestellten Informationen durch Dritte
+
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.  
 
 ## Urheberrecht
 

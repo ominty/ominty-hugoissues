@@ -2,9 +2,9 @@
 title 		= "Hugo und PHP?"
 date 		= "2017-02-04"
 description = "Webseitengenerator Hugo: wie binde ich PHP-Scripte ein? Ein Workaround ohne externe Dienste"
-keywords      = "Hugo, Webseite, PHP, Kommando, Script, upload, ftp"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+keywords    = "Hugo, Webseite, PHP, Kommando, Script, upload, ftp"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
 +++
 
 Eine Crux mit statischen Webseiten ist ... sie sind statisch. Und genau daraus ergeben sich ja auch die [entscheidenden Vorteile] (/blog/2015-12-22-statisches-blog-mit-hugo.html) dieses Webseitentyps. Was aber, wenn dann doch so ein "kleines Bißchen Dynamik" reinkommen soll, wie z. B. ein Kontaktformular?<!--more-->
@@ -117,7 +117,9 @@ Damit der PHP-Inhalt dieser Seite jetzt auf dem Webserver ausgeführt werden kan
 - entweder der Webserver angewiesen werden, PHP in normalen HTML-Dokumenten auszuführen. Das ist aber nicht die beste Lösung, denn
     - nicht jeder Kunde kann das auf dem Webspace seines Providers einstellen
     - wird der Webserver belastet, weil er jede Datei, die er ausliefert, nach PHP durchsucht. Das verlangsamt die Auslieferung der Seiten und damit wird ein Hauptvorteil statischer Seiten torpediert.
-- oder die Datei in eine PHP-Datei umbenannt werden, in LInux mittels
+- oder die Datei in eine PHP-Datei umbenannt werden
+
+<!-- , in Linux mittels
 ```
 mv -v ./public/kontakt.html ./public/kontakt.php
 ```
@@ -127,13 +129,31 @@ Sämtliche internen Links innerhalb der Hugo-generierten Webseiten verweisen nac
 Daher muß die Datei `kontakt.html` umgeleitet werden, dies wird durch einen Eintrag in der Datei `.htaccess` bewerkstelligt:
 ```
 Redirect permanent /kontakt.html  http://www.domain.tld/kontakt.php
+``` -->
+
+Die zweite Variante ist sehr einach zu bewerkstelligen, denn Hugo kennt die Seitenvariable `.Url`. Damit läßt sich im Seitenkopf (Frontmatter) einer Seite deren Pfad und Name "überschreiben" mittels einer zusätzlichen Zeile mit der Angabe `url = "{Pfad/Dateiname}"`.
+
 ```
++++
+title 		= "Ein Blog mit Hugo erstellen - Teil 2"
+date 		= "2015-12-28T22:25:17+01:00"
+url         = "/kontakt/formular.php"
+categories 	= ["Webseiten"]
+tags 		= ["Hugo", "Tutorial"]
+
++++
+
+>>>Seiteninhalt<<<
+```
+So läßt sich die Datei `kontakt.md` zum Beispiel als `http://www.domain.tld/kontakt/formular.php` ausgeben. Alle internen Links in den von Hugo erstellten Menüs verweisen dann automatisch auf das richtige Ziel.
 
 ## Zusammenfassung
 Um auf einer durch einen statischen Webseitengenerator, hier: Hugo, erstellten Webseite wenige interaktive Einzelseiten unterzubringen, bietet sich folgende Behelfslösung an:
 
 - Markdown-Dokument anlegen
 - fertiges Formular in HTML und  Formularverarbeitung als PHP-Quelltext komplett in einen `div`-Container einbetten und diesen in das Markdown  Dokument kopieren
-- Seite rendern lassen
-- die entstandene `seite.html` in `seite.php` umbenennen.
-- auf dem Server per `.htaccess` eine Seitenumleitung einrichten
+- `url` in den Seitenkopf notieren
+- Seite rendern lassen und auf den Server laden
+
+<!-- - die entstandene `seite.html` in `seite.php` umbenennen.
+- auf dem Server per `.htaccess` eine Seitenumleitung einrichten -->

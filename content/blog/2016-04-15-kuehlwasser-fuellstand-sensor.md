@@ -1,8 +1,8 @@
 +++
 title 		= "Kontrolle des Kühlwasserstand-Sensors ratsam"
+description = "Defekte Kühlwasserschläuche können zu Motorschaden führen. Der Daily hat einen Kühlwasserstandsensor - aber der sollte auch funktionieren ..."
 date 		= "2016-04-15"
-categories 	= ["Iveco"]
-tags 	    = ["Fahrzeugtechnik"]
+iveco	    = ["Blogartikel", "Fahrzeugtechnik"]
 
 +++
 

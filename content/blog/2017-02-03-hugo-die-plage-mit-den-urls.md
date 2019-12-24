@@ -2,13 +2,13 @@
 title 		= "Hugo und die Plage mit den URLs"
 date 		= "2017-02-03"
 description = "Relative und/oder absolute Links - falsch eingesetzt können Inhalte oder Layout-Bestandteile fehlen. Hier erkläre ich die Einstellungen in Hugo."
-keywords      = "Hugo, URL, relativ, absolut, Link"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+keywords    = "Hugo, URL, relativ, absolut, Link"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
 +++
 
 Eine Webseite im Internet anzugucken - ist nix besonderes, dazu sind die ja da. Hugo erstellt eine statische Webseite, es liegen fertige Files auf der Festplatte. Eigentlich sollte man diese auch direkt im Browser anschauen <!--more--> können, aber:    
-(Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tags/hugo.html) notwendig) 
+(Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tutorials/hugo.html) notwendig) 
 
 ## "Die eierlegende Wollmilchsau"
 So eine mit Hugo erstellte Webseite sollte also idealerweise

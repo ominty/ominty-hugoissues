@@ -1,9 +1,10 @@
 +++
 title 		= "Solaranlagen-Logfiles auswerten mit gnuplot"
+description = "Beschreibung, wie man mit gnuplot Meßdaten aus einem Textfile schnell in eine ansprechende Grafik umwandelt"
 date 		= "2016-10-12"
-categories 	= ["Software"]
-tags     	= ["Programme", "Solar"]
-
+software    = ["Meßwertauswertung"]
+programme   = ["gnuplot"]
+wohnmobile  = ["Blogartikel", "Solar", "Elektrik"]
 +++
 
 Mein [Solarregler](http://privat.albicker.org/iveco-womo/elektrik.html) schreibt ein Protokoll über seine Aktivitäten, d. h. er schreibt Datum, Uhrzeit und die zugehörigen Werte für Spannung und Strom am Eingang, also von der Solarzelle, sowie Ausgang, also zur Batterie, in ein Textfile, das er auf einer SD-Karte abspeichert.    

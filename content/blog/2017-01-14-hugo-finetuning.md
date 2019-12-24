@@ -2,12 +2,13 @@
 title 		= "Hugo-Finetuning, Tipps aus der Praxis"
 date 		= "2017-01-14"
 description = "Webseitengenerator Hugo: Kurzkommandos und effektiver upload per automatisiertem Script"
-keywords      = "Hugo, Webseite, Kommando, Script, upload, ftp"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tipps"]
+keywords    = "Hugo, Webseite, Kommando, Script, upload, ftp"
+software 	= ["Webseiten"]
+programme	= ["Hugo"]
+
 +++
 
-Nach einiger Zeit der intensiven Nutzung von Hugo haben sich ein paar Dinge ergeben, die die Arbeit vereinfachen. Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tags/hugo.html) notwendig.    
+Nach einiger Zeit der intensiven Nutzung von Hugo haben sich ein paar Dinge ergeben, die die Arbeit vereinfachen. Für das Verständnis ist die Kenntnis der ersten 4 Teile des [Tutorials](/tutorials/hugo.html) notwendig.    
 (Die Hinweise beziehen sich auf die derzeit aktuelle Version 0.17 von Hugo)
 <!--more-->
 ## Hugo vereinfachen

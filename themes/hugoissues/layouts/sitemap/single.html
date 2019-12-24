@@ -1,0 +1,51 @@
+<a name="oben"></a>
+{{ partial "header.html" . }}
+
+<div class="canvasContent">
+    <article>
+<!-- {{ partial "breadcrumb.html" . }} -->
+      <!--Seiteninhalt-->
+
+			<h1>{{ .Title }}</h1>
+      
+                {{ $home := .Site.Home }}
+                 <div class="css-treeview box">
+                	<ul>
+                		<li>privat.albicker.org</li>
+                		<ul>
+                		{{ template "section-tree-nav" $home }}
+                		</ul>
+                	</ul>
+                </div>
+                
+                {{ define "section-tree-nav" }}
+                {{ range .Sections.Reverse}}
+                	<li>{{ .Title }}
+                	<ul>
+                		{{ range .Pages }}
+                		{{ if ne .Type "teaser" }}
+                		<li><a href="{{ .RelPermalink}}">{{ .Title }}</a></li>
+                		{{ end }}
+                		{{ end }}
+                		<ul>
+                		{{ template "section-tree-nav" . }}
+                		</ul>
+                	</ul>
+                {{ end }}
+                {{ end }}
+			<p>&nbsp;</p>
+			<hr>
+			<!-- <p class="small">zuletzt geändert am: {{ now.Format .Site.Params.DateForm }}</p> -->  <!-- Format seitenweit in config.toml definiert -->
+			<p class="small">zuletzt geändert am: {{ now.Format "02.01.2006" }}</p>   
+			
+    </article> 
+   
+    <aside>
+    
+	         {{ partial "sidenav.html" . }}
+
+    </aside>
+</div>  
+ 
+{{ partial "footer.html" . }}
+

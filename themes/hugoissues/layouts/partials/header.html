@@ -3,14 +3,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta charset="UTF-8"/>
-{{ .Hugo.Generator }}
-<meta name="generator" content="Bluefish 2.2.7" />
+{{ hugo.Generator }}
+<meta name="generator" content="Bluefish 2.2.10" />
 <title>
     {{ if or (eq .Kind "page") (eq .Kind "home") }}
         {{ if eq .Section "blog" }}
-            {{ .Title }} * {{ .Site.Params.BlogTitle }}
+            {{ .Title }} 
         {{ else }}
-            {{ .Title }} * {{ .Site.Title }}
+            {{ .Title }} 
         {{ end }}
     {{ else }}
         {{ if eq .Section "blog" }}
@@ -23,7 +23,8 @@
 {{ if eq .Kind "page" }}
     <meta name = "ROBOTS" content = "index, follow, NOARCHIVE">
     <meta name="description" content="{{ .Description }} - {{ .Title }} -">
-    <meta name="KEYWORDS" content="{{ .Keywords }}">
+    {{ with .Keywords }}<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }} {{ end }}{{ $e }}{{ end }}">{{ end }}
+    <!-- <meta name="KEYWORDS" content="{{ .Keywords }}"> -->
 {{ else }}
     <meta name = "ROBOTS" content = "noindex, follow, NOARCHIVE">
 {{ end }}
@@ -35,10 +36,10 @@
 
 <!-- RSS-Links für Inhaltsseiten und Listenseiten -->
     {{ if or (eq .Kind "page") (eq .Kind "home") }}
-        <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />        
+    <!-- Möglichkeit finden, die aktuelle .Section in die Adresse einzubauen!!! -->
+        <link href="{{ "/blog/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />       
     {{ else }}
-        <!-- in Hugo 0.18.1 fehlerhaft: -->
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+        <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
     {{ end }}
 <!-- /RSS-Links für Inhaltsseiten und Listenseiten -->
 
@@ -49,10 +50,6 @@
 
 -->
 </script>
-  <!-- Java-Script für IE 6-8, damit diese mit HTML5-Elementen umgehen können -->  
-  <!--[if lt IE 9]>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
 
 <!-- seitenspezifische Einbindungen -->
 {{ if eq .Type "php" }}
@@ -61,27 +58,46 @@
 
 {{ end }}
 <!-- Ende seitenspezifische Einbindungen -->
+
+<!-- youtube/vimeo DSGVO-konform einbinden -->
+<!-- https://github.com/a-v-l/dsgvo-video-embed -->
+<link rel="stylesheet" href="{{ "/dsgvo-video-embed/dist/dsgvo-video-embed.min.css" | relURL }}">
+<script src="/dsgvo-video-embed/dist/dsgvo-video-embed.min.js"></script>
+<!-- /youtube/vimeo DSGVO-konform einbinden -->
+
 </head>
 
 <body>
+<!-- Seitenanfang Sprungmarke -->
+<a id="anfang" name="anfang" title="Seitenanfang"></a>
 <div class="canvasHeader">
  <header>
  <!-- <img src="{{ "/logos/titel.gif" | relURL }}" alt="logo"> -->
- <a href="{{ "/" | relURL }}" name="zur Startseite" id="header" title="zur Startseite"><h1>This is a HUGO TEST PAGE</h1></a> 
-    <nav>
+ <a href="{{ "/" | relURL }}" name="zur Startseite" id="header" title="zur Startseite"><img src="{{ "/logos/titel.gif" | relURL }}" alt="zur Startseite"></a> 
+    <nav class="menu-nav">
         <ul>
-            {{ $currentPage := . }}
+        {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-            <li><a href="{{.URL}}">{{ .Name }}</a></li>
+            <li>
+                <a class="menu-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}-active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+            </li>
             {{ end }}
         </ul>
     </nav>
 
-    <ul>
-    {{ range $.Site.Home.AllTranslations }}
-    <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-    {{ end }}
-    </ul>
+    {{ partial "vgwort.html" . }}
 
- </header> 
+ </header>
 </div> 
+ 
+<!-- Info an Internet-Explorer-User -->
+    <!-- <div class="internetexplorer">
+        <p style="color: red; "><b>Sie verwenden einen nicht standard-konformen Browser. Die Inhalte dieser Seite sind zwar zugänglich, aber das Design kann an der einen oder anderen Stelle etwas "rustikal" aussehen.<br /><br />Richtig dargestellt werden diese Seiten z. B. in Google Chrome oder Firefox.</b></p>
+    </div> -->
+    
+<div class="print">
+    <p>Druckausgabe von {{ .Site.BaseURL }}<br>
+    <b>{{ .Site.Title }}</b></p>
+</div>
+
+

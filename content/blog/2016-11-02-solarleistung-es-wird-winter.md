@@ -1,8 +1,9 @@
 +++
 title 		= "Solarleistung: Es wird Winter"
+description = "Auswertung von einem sonnigen Tag Ende Oktober"
 date 		= "2016-10-30"
-categories 	= ["Reisen", "WOMO"]
-tags 		= ["Elektrik", "Solar"]
+reisen      = ["Versorgung"]
+wohnmobile	= ["Blogartikel", "Elektrik", "Solar"]
 
 +++
 

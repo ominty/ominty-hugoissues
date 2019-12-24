@@ -1,0 +1,9 @@
+    <section>
+	   <div style="height: 3em; ">&nbsp; <!-- Höhenausgleich für breadcrumb --> </div>
+	   
+    <h2>meistgelesen:</h2>
+        <ul>
+			{{ range (where .Site.Pages ".Params.meistgelesen" "1" ) }}
+				<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>    			    {{ end }}
+		</ul>
+	</section>

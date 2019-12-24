@@ -1,11 +1,11 @@
 +++
-title 		= "Steckbrief meiner 'ständigen Begleiterinnen'"
+title 		= "Steckbriefe meiner 'ständigen Begleiterinnen'"
 linktitle   = "Steckbriefe"
 date 		= "2015-10-16"
 description = "Die Lebensläufe meiner Damen in Kurzform und Links zu Bildern"
-keywords      = "Hund, Marokko, Spanien"
-weight = 1
-categories 	= ["Hunde"]
+keywords    = "Hund, Marokko, Spanien"
+weight      = 1
+hunde       = ["Homepage"]
 +++
 
 <!--INHALT Beginn-->

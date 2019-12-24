@@ -1,10 +1,11 @@
 +++
-title 		= "Ein Blog mit Hugo erstellen - Tutorial Teil 4 - Betriebsmodi von Hugo"
-date 		= "2015-12-30T22:25:17+01:00"
-description = "Hugos Betriebsmodi: Server-Mode und Rendering-Mode. Was bedeutet das? Welcher Mode wird wofür benötigt? Es wird die Live-Vorschau beim Erstellen von Artikeln beschrieben sowie der Export zur fertigen Webseite für den Webserver im www"
-keywords      = "Hugo, Webseite, Rendering, Server, Vorschau, Live"
-categories 	= ["Webseiten"]
-tags 		= ["Hugo", "Tutorial"]
+title 		    = "Ein Blog mit Hugo erstellen - Tutorial Teil 4 - Betriebsmodi von Hugo"
+date 		    = "2015-12-30T22:25:17+01:00"
+description     = "Hugos Betriebsmodi: Server-Mode und Rendering-Mode. Was bedeutet das? Welcher Mode wird wofür benötigt? Es wird die Live-Vorschau beim Erstellen von Artikeln beschrieben sowie der Export zur fertigen Webseite für den Webserver im www"
+keywords        = "Hugo, Webseite, Rendering, Server, Vorschau, Live"
+software 	    = ["Webseiten", "Blog"]
+programme	    = ["Hugo"]
+tutorials 		= ["Hugo"]
 
 +++
 

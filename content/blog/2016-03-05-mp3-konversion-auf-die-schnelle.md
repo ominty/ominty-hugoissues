@@ -1,8 +1,9 @@
 +++
 title 		= "DVB-S Radioprogramme zu mp3 konvertieren - im Batch auf die Schnelle"
+description = "Von Astra aufgenommene Radiosendungen (gespeichert als Transportstrom) im Batch-Modus in Player-freundliche Formate (hier: mp3) konvertieren"
 date 		= "2016-03-05"
-categories 	= ["Medien"]
-tags 		= ["Programme"]
+medien   	= ["Podcast"]
+programme	= ["ffmpeg", "ProjectX"]
 
 +++
 

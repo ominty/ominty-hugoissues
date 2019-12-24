@@ -1,8 +1,8 @@
 +++
 title 		= "Solarzellen offenbar noch gut in Schuss"
+description = "Vermessung der Solarzellen nach 19 Jahren Betriebszeit unter realen Bedingungen"
 date 		= "2016-09-21"
-categories 	= ["Reisen", "WOMO"]
-tags 		= ["Elektrik", "Solar"]
+wohnmobile	= ["Blogartikel", "Elektrik", "Solar"]
 
 +++
 

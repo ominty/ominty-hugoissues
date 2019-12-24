@@ -1,8 +1,7 @@
 +++
 title 		= "Sonnenbrille - Urlaub!"
 date 		= "2016-09-25"
-categories 	= ["Reisen"]
-tags 		= ["Erfahrungen"]
+reisen 		= ["Erfahrungen"]
 
 +++
 

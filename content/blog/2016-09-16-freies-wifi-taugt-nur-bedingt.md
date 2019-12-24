@@ -1,8 +1,9 @@
 +++
 title 		= "Freies WIFI taugt nur bedingt"
+description = "WLAN-Hotspots werden immer wieder als DER Zugang zum Internet angepriesen. Nur leider funktionieren die nur sehr gefiltert und zensiert ..."
 date 		= "2016-09-16"
-categories 	= ["Reisen"]
-tags     	= ["Erfahrungen", "Telekommunikation"]
+reisen    	= ["Erfahrungen", "Telekommunikation"]
+medien     	= ["Mobiles Internet"]
 
 +++
 

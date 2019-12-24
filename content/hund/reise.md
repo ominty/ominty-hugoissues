@@ -5,7 +5,7 @@ date 		= "2006-08-24"
 description = "Meine persönliche Erfahrungen mit Hunden auf Reisen und ein paar nützliche Tipps"
 keywords    = "Hund, Reise, Impfung, Impfpass, Futter"
 weight      = 3
-categories 	= ["Hunde"]
+hunde       = ["Homepage", "Reise"]
 
 +++
 
